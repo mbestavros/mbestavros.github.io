@@ -20,6 +20,14 @@
                 </ul>
             </div>
 
+            <button class="mdc-fab" aria-label="Favorite">
+                <span class="mdc-fab__icon material-icons">favorite</span>
+              </button>
+
+              <button class="mdc-button">
+                <span class="mdc-button__label">Button</span>
+              </button>
+
             <div class="footer-col one-half">
                 <p>{{- site.description | escape -}}</p>
             </div>
@@ -32,3 +40,10 @@
     </div>
 
 </footer>
+
+<script>
+const MDCRipple = mdc.ripple.MDCRipple;
+
+const fabRipple = new MDCRipple(document.querySelector('.mdc-fab'));
+const buttonRipple = new MDCRipple(document.querySelector('.mdc-button'));
+</script>

@@ -1,0 +1,17 @@
+<script>
+const MDCTopAppBar = mdc.topAppBar.MDCTopAppBar;
+const MDCDrawer = mdc.drawer.MDCDrawer;
+
+// Top App Bar Instantiation
+const topAppBar = MDCTopAppBar.attachTo(document.getElementById('app-bar'));
+
+// Drawer instantiation
+const drawer = MDCDrawer.attachTo(document.getElementById('app-drawer'));
+
+// Set separate scrolling for drawer and content
+topAppBar.setScrollTarget(document.getElementById('main-content'));
+// Open drawer when hamburger button clicked
+topAppBar.listen('MDCTopAppBar:nav', () => {
+  drawer.open = !drawer.open;
+});
+</script>

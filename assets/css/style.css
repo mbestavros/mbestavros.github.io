@@ -1,0 +1,36 @@
+/* // Primary colors ($mdc-theme-primary) map to components such as app bars and buttons, while secondary colors ($mdc-theme-secondary) are used as accents on components such as FABs and selection controls.
+
+$mdc-theme-primary: #3d5afe;
+$mdc-theme-secondary: #ff7043;
+
+// Theme background ($mdc-theme-background) appears behind scrollable content. Surface color ($mdc-theme-surface) is mapped to the surface of components such as cards, sheets, and menus. Error color ($mdc-theme-error) is used to indicate an error state for components such as text fields provided with inaccurate input.
+
+$mdc-theme-surface: #212121;
+$mdc-theme-background: #121212; */
+
+body {
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.mdc-drawer-app-content {
+  flex: auto;
+  overflow: auto;
+  position: relative;
+}
+
+.main-content {
+  overflow: auto;
+  height: 100%;
+}
+
+.app-bar {
+  position: absolute;
+}
+
+/* // only apply this style if below top app bar
+// .mdc-top-app-bar {
+//   z-index: 7;
+// */

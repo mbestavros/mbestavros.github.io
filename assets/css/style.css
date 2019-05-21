@@ -32,7 +32,16 @@ body {
   position: absolute;
 }
 
-/* // only apply this style if below top app bar
-// .mdc-top-app-bar {
-//   z-index: 7;
-// */
+/* BREAKPOINT min-width:900px */
+
+.mdc-top-app-bar__navigation-icon {
+  display: none;
+}
+
+/* BREAKPOINT max-width:900px */
+
+@media (max-width: 900px) {
+  .mdc-top-app-bar__navigation-icon {
+    display: block;
+  }
+}

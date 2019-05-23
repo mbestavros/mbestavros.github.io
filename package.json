@@ -1,0 +1,19 @@
+{
+  "name": "mbestavros.github.io",
+  "version": "1.0.0",
+  "description": "Mark Bestavros' personal site.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mbestavros/mbestavros.github.io.git"
+  },
+  "author": "MArk Bestavros",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mbestavros/mbestavros.github.io/issues"
+  },
+  "homepage": "https://github.com/mbestavros/mbestavros.github.io#readme"
+}

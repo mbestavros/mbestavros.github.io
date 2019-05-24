@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+{%- include head.html -%}
+
+<body class="mdc-typography">
+    {%- include drawer.html -%}
+    <div class="mdc-drawer-app-content">
+        {%- include header.html -%}
+        <main class="main-content" id="main-content" aria-label="Content">
+            <div class="mdc-top-app-bar--fixed-adjust">
+                {{ content }}
+            </div>
+        </main>
+    </div>
+
+    {%- include script.html -%}
+</body>
+
+</html>

@@ -5,15 +5,15 @@
 <body class="mdc-typography">
     {%- include drawer.html -%}
     <div class="mdc-drawer-app-content">
-        {%- include header.html -%}
+        {%- include top-app-bar.html -%}
         <main class="main-content" id="main-content" aria-label="Content">
             <div class="mdc-top-app-bar--fixed-adjust">
                 {{ content }}
             </div>
         </main>
     </div>
-
-    {%- include script.html -%}
 </body>
+
+<script>{%- include assets/bundle.js -%}</script>
 
 </html>

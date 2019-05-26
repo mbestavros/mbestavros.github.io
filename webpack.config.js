@@ -3,12 +3,12 @@ const autoprefixer = require('autoprefixer');
 const path = require('path');
 
 module.exports = [{
-  entry: './assets/scss/style.scss',
+  entry: ['./assets/scss/style.scss','./assets/js/app.js'],
   output: {
-    path: path.resolve(__dirname, '_includes/css'),
+    path: path.resolve(__dirname, '_includes/assets'),
     // This is necessary for webpack to compile
     // But we never use style-bundle.js
-    filename: 'style.js',
+    filename: 'bundle.js',
   },
   watch: true,
   module: {
@@ -19,7 +19,7 @@ module.exports = [{
           {
             loader: 'file-loader',
             options: {
-              name: 'style.css',
+              name: 'bundle.css',
             },
           },
           { loader: 'extract-loader' },
@@ -37,6 +37,13 @@ module.exports = [{
             }
           },
         ]
+      },
+      {
+        test: /\.js$/,
+        loader: 'babel-loader',
+        query: {
+          presets: ['es2015'],
+        },
       }
     ]
   },

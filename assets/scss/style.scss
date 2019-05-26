@@ -1,31 +1,17 @@
+// MDC Web color mixins dynamically color components and text.
 $mdc-theme-primary: #3d5afe;
 $mdc-theme-secondary: #ff7043;
-
-
-// Theme background ($mdc-theme-background) appears behind scrollable content. Surface color ($mdc-theme-surface) is mapped to the surface of components such as cards, sheets, and menus. Error color ($mdc-theme-error) is used to indicate an error state for components such as text fields provided with inaccurate input.
-
 $mdc-theme-surface: #212121;
 $mdc-theme-background: #121212;
 $mdc-theme-error: #b00020;
 
+// Import MDC Web components
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/typography/mdc-typography";
 
-// :root {
-//   --mdc-theme-primary: #3d5afe;
-//   --mdc-theme-secondary: #ff7043;
-//   --mdc-theme-on-primary: #fff;
-//   --mdc-theme-on-secondary: #000;
-//   --mdc-theme-on-surface: #fff;
-//   --mdc-theme-background: #121212;
-//   --mdc-theme-surface: #212121;
-// }
-
 body {
-  /* Rest of app not ready for dark background */
-  /* background: #121212; */
   display: flex;
   height: 100vh;
   margin: 0;
@@ -48,13 +34,11 @@ body {
 }
 
 /* BREAKPOINT min-width:900px */
-
 .mdc-top-app-bar__navigation-icon {
   display: none;
 }
 
 /* BREAKPOINT max-width:900px */
-
 @media (max-width: 900px) {
   .mdc-top-app-bar__navigation-icon {
     display: block;

@@ -1,4 +1,12 @@
+$mdc-theme-primary: #3d5afe;
+$mdc-theme-secondary: #ff7043;
 
+
+// Theme background ($mdc-theme-background) appears behind scrollable content. Surface color ($mdc-theme-surface) is mapped to the surface of components such as cards, sheets, and menus. Error color ($mdc-theme-error) is used to indicate an error state for components such as text fields provided with inaccurate input.
+
+$mdc-theme-surface: #212121;
+$mdc-theme-background: #121212;
+$mdc-theme-error: #b00020;
 
 @import "@material/top-app-bar/mdc-top-app-bar";
 @import "@material/drawer/mdc-drawer";

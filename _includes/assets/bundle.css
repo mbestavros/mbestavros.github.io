@@ -1234,10 +1234,12 @@ a.mdc-list-item {
   text-transform: uppercase; }
 
 body {
+  background-color: #121212;
   display: flex;
   height: 100vh;
   margin: 0;
-  padding: 0; }
+  padding: 0;
+  color: #fff; }
 
 .mdc-drawer-app-content {
   flex: auto;

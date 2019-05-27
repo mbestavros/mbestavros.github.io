@@ -12,10 +12,12 @@ $mdc-theme-error: #b00020;
 @import "@material/typography/mdc-typography";
 
 body {
+  background-color: #121212;
   display: flex;
   height: 100vh;
   margin: 0;
   padding: 0;
+  color: #fff;
 }
 
 .mdc-drawer-app-content {

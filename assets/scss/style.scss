@@ -10,6 +10,10 @@ $mdc-theme-error: #b00020;
 @import "@material/drawer/mdc-drawer";
 @import "@material/list/mdc-list";
 @import "@material/typography/mdc-typography";
+@import "@material/layout-grid/mdc-layout-grid";
+@import "@material/card/mdc-card";
+@import "@material/button/mdc-button";
+@import "@material/icon-button/mdc-icon-button";
 
 body {
   background-color: #121212;
@@ -33,6 +37,14 @@ body {
 
 .app-bar {
   position: absolute;
+}
+
+.demo-card__primary {
+  padding: 16px;
+}
+
+.demo-card__secondary {
+  padding: 16px;
 }
 
 /* BREAKPOINT min-width:900px */

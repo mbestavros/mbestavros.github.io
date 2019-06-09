@@ -7,8 +7,6 @@ $mdc-theme-error: #b00020;
 
 // Import MDC Web components
 @import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/drawer/mdc-drawer";
-@import "@material/list/mdc-list";
 @import "@material/typography/mdc-typography";
 @import "@material/layout-grid/mdc-layout-grid";
 @import "@material/card/mdc-card";
@@ -24,7 +22,7 @@ body {
   color: #fff;
 }
 
-.mdc-drawer-app-content {
+.app-content {
   flex: auto;
   overflow: auto;
   position: relative;
@@ -35,10 +33,6 @@ body {
   height: 100%;
 }
 
-.app-bar {
-  position: absolute;
-}
-
 .demo-card__primary {
   padding: 16px;
 }
@@ -47,14 +41,35 @@ body {
   padding: 16px;
 }
 
+// Reset List Styles
+.navList {
+  list-style: none;
+  height: 32px;
+  padding-left: 0;
+}
+
+// Style the list items side by side
+.navListItem {
+  display: inline-block;
+  margin: 0 8px;
+}
+
+.navListLink {
+  @include mdc-button-ink-color(white);
+}
+
+.app-bar {
+  position: absolute;
+}
+
 /* BREAKPOINT min-width:900px */
-.mdc-top-app-bar__navigation-icon {
-  display: none;
+.mdc-top-app-bar__title {
+  display: block;
 }
 
 /* BREAKPOINT max-width:900px */
 @media (max-width: 900px) {
-  .mdc-top-app-bar__navigation-icon {
-    display: block;
+  .mdc-top-app-bar__title {
+    display: none;
   }
 }

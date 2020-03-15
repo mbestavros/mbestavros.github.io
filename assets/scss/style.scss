@@ -1,17 +1,21 @@
-// MDC Web color mixins dynamically color components and text.
-$mdc-theme-primary: #3d5afe;
-$mdc-theme-secondary: #ff7043;
-$mdc-theme-surface: #212121;
-$mdc-theme-background: #121212;
-$mdc-theme-error: #b00020;
-
 // Import MDC Web components
-@import "@material/top-app-bar/mdc-top-app-bar";
-@import "@material/typography/mdc-typography";
-@import "@material/layout-grid/mdc-layout-grid";
-@import "@material/card/mdc-card";
-@import "@material/button/mdc-button";
-@import "@material/icon-button/mdc-icon-button";
+@use "@material/theme" with (
+  // MDC Web color mixins dynamically color components and text.
+  $primary: #3d5afe,
+  $secondary: #ff7043,
+  $surface: #212121,
+  $background: #121212,
+  $error: #b00020,
+);
+@use "material-components-web";
+@use "@material/top-app-bar/mdc-top-app-bar";
+@use "@material/typography/mdc-typography";
+@use "@material/layout-grid/mdc-layout-grid";
+@use "@material/card/mdc-card";
+@use "@material/button/mdc-button";
+@use "@material/ripple";
+@use "@material/icon-button/mdc-icon-button";
+
 
 body {
   background-color: #121212;
@@ -52,10 +56,6 @@ body {
 .navListItem {
   display: inline-block;
   margin: 0 8px;
-}
-
-.navListLink {
-  @include mdc-button-ink-color(white);
 }
 
 .app-bar {

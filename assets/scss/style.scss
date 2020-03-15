@@ -32,15 +32,6 @@ body {
   height: 100%;
 }
 
-// Card styles for home
-.home-card__primary {
-  padding: 16px;
-}
-
-.home-card__secondary {
-  padding: 16px;
-}
-
 // Reset List Styles
 .navList {
   list-style: none;
@@ -68,4 +59,23 @@ body {
   .mdc-top-app-bar__title {
     display: none;
   }
+}
+
+// Card styles for home
+.home-card__primary {
+  padding: 16px;
+}
+
+.home-card__secondary {
+  padding: 16px;
+}
+
+// Card styles for post content
+.post-content {
+  padding: 16px;
+}
+
+.post-image {
+  max-width: 100%;
+  height: auto;
 }

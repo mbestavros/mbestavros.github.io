@@ -33,7 +33,8 @@ module.exports = [{
             options: {
               sassOptions: {
                 includePaths: ['./node_modules']
-              }
+              },
+              implementation: require('sass'),
             }
           },
         ]

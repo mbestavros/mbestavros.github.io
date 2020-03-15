@@ -1,7 +1,10 @@
 # Deployment action from https://github.com/TartanLlama/actions-eleventy/
 
 name: Eleventy Build
-on: [push]
+on:
+    push:
+        branches:
+            - source  # default branch; needed to make user GH pages work
 
 jobs:
   build_deploy:
@@ -17,3 +20,4 @@ jobs:
         with:
             github_token: ${{ secrets.GITHUB_TOKEN }}
             publish_dir: ./_site
+            publish_branch: master

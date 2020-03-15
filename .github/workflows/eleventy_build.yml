@@ -1,0 +1,19 @@
+# Deployment action from https://github.com/TartanLlama/actions-eleventy/
+
+name: Eleventy Build
+on: [push]
+
+jobs:
+  build_deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Build
+        uses: TartanLlama/actions-eleventy@v1.2
+        with:
+            install_dependencies: true
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3.5.3
+        with:
+            github_token: ${{ secrets.GITHUB_TOKEN }}
+            publish_dir: ./_site

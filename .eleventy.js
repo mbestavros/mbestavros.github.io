@@ -5,6 +5,5 @@ module.exports = function (eleventyConfig) {
             input: "./",      // Equivalent to Jekyll's source property
             output: "./_site" // Equivalent to Jekyll's destination property
         },
-        passthroughFileCopy: true,
     };
 };

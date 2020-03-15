@@ -5,16 +5,12 @@
   $secondary: #ff7043,
   $surface: #212121,
   $background: #121212,
-  $error: #b00020,
+  $on-primary: #ffffff,
+  $on-secondary: #ffffff,
+  $on-surface: #ffffff,
 );
 @use "material-components-web";
-@use "@material/top-app-bar/mdc-top-app-bar";
-@use "@material/typography/mdc-typography";
-@use "@material/layout-grid/mdc-layout-grid";
-@use "@material/card/mdc-card";
-@use "@material/button/mdc-button";
-@use "@material/icon-button/mdc-icon-button";
-
+@use "@material/button";
 
 body {
   background-color: #121212;
@@ -36,11 +32,12 @@ body {
   height: 100%;
 }
 
-.demo-card__primary {
+// Card styles for home
+.home-card__primary {
   padding: 16px;
 }
 
-.demo-card__secondary {
+.home-card__secondary {
   padding: 16px;
 }
 

@@ -12,7 +12,7 @@
     "url": "git+https://github.com/mbestavros/mbestavros.github.io.git"
   },
   "author": "Mark Bestavros",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/mbestavros/mbestavros.github.io/issues"
   },

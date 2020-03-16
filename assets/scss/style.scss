@@ -10,7 +10,6 @@
   $on-surface: #ffffff,
 );
 @use "material-components-web";
-@use "@material/button";
 
 body {
   background-color: #121212;
@@ -67,6 +66,15 @@ body {
 }
 
 .home-card__secondary {
+  padding: 16px;
+}
+
+// Card styles for article listing
+.article-card__primary {
+  padding: 16px;
+}
+
+.article-card__secondary {
   padding: 16px;
 }
 

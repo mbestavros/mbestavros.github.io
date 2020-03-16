@@ -1,11 +1,11 @@
 --- 
 layout: layouts/post
-title: Another example post
-subtitle: This is my second ever blog post.
+title: Yet another example post
+subtitle: I hope you get the idea by now. It'll get repetitive the more we do this. Very, very, repetitive. I think I need to sleep.
 --- 
 # {{ title }} 
   
-This is my special place on the big World Wide Web. Part 2!
+This is my special place on the big World Wide Web. Part 3!
 
 ## Here's another subheader
 

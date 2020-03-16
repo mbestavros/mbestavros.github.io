@@ -1,7 +1,7 @@
 --- 
 layout: layouts/post
-title: Another example post
-subtitle: This is my second ever blog post.
+title: I think this is enough dummy data for now, don't you?
+subtitle: I'm done. Really.
 --- 
 # {{ title }} 
   

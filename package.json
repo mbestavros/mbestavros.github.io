@@ -26,6 +26,7 @@
     "@material/icon-button": "^5.1.0",
     "@material/layout-grid": "^5.1.0",
     "@material/ripple": "^5.1.0",
+    "@material/tab-bar": "^5.1.0",
     "@material/top-app-bar": "^5.1.0",
     "@material/typography": "^5.1.0",
     "autoprefixer": "^9.7.4",
@@ -44,6 +45,6 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
-
+    
   }
 }

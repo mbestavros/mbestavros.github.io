@@ -1,6 +1,7 @@
 // Import MDC components
 import {MDCTopAppBar} from '@material/top-app-bar';
 import {MDCRipple} from '@material/ripple';
+import {MDCTabBar} from '@material/tab-bar';
 
 // Instantiate elements
 const topAppBarElement = document.getElementById('app-bar');
@@ -10,8 +11,13 @@ const mainContentElement = document.getElementById('main-content');
 const topAppBar = new MDCTopAppBar(topAppBarElement);
 topAppBar.setScrollTarget(mainContentElement);
 
+// Initialize article list tab bar
+try {
+  const articleListTabBar = new MDCTabBar(document.querySelector('.mdc-tab-bar'));
+} catch(e) {}
+
 // Add ripples to Card action buttons
-const selector = '.mdc-card__action--button';
-const ripples = [].map.call(document.querySelectorAll(selector), function(el) {
+const rippleSelector = '.mdc-card__action--button, .mdc-card__primary-action';
+const ripples = [].map.call(document.querySelectorAll(rippleSelector), function(el) {
   return new MDCRipple(el);
 });

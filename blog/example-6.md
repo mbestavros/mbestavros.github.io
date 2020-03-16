@@ -1,7 +1,7 @@
 --- 
 layout: layouts/post
-title: Another example post
-subtitle: This is my second ever blog post.
+title: Last one...
+subtitle: Promise?
 --- 
 # {{ title }} 
   

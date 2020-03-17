@@ -35,40 +35,112 @@
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
                             
-<div class="home">
-    <div class="mdc-card home-card">
-        <div class="mdc-card__media mdc-card__media--16-9 home-card__media"
-            style="background-image: url(assets/img/profile_fall_2019.JPG)"></div>
-        <div class="home-card__primary">
-            <h2 class="home-card__title mdc-typography mdc-typography--headline4">Hey there! I'm Mark.</h2>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">I'm a Boston-based software engineer,
-                currently working at Red Hat on the Enarx project. I graduated from Boston University in 2019 with a
-                combined BA/MS in Computer Science.</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">If you'd like to know more about me,
-                what I do, and what I enjoy, have a look at my detailed About page on the top navbar. If you're
-                interested in reading my thoughts on various topics (usually technology related), check out my blog,
-                also linked up top. (NOTE: both these pages are WIP. The blog is live as a prototype, if you want to see how that will look.)</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">Otherwise, I've also included a few
-                places you can find me just below.</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">Thanks for stopping by!</h3>
-        </div>
-        <div class="mdc-card__actions home-card__actions">
-            <div class="mdc-card__action-buttons home-card__action-buttons">
-                <a class="home-card__action-button mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button" id="home-github-button" href="https://github.com/mbestavros">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Github</span>
-                </a>
-                <a class="home-card__action-button mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button" id="home-linkedin-button" href="https://www.linkedin.com/in/mbestavros/">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">LinkedIn</span>
-                </a>
-                <a class="home-card__action-button mdc-button mdc-button--unelevated mdc-card__action mdc-card__action--button" id="home-twitter-button" href="https://twitter.com/MBestavros">
-                    <div class="mdc-button__ripple"></div>
-                    <span class="mdc-button__label">Twitter</span>
-                </a>
+<nav class="mdc-tab-bar article-page-list" role="tablist">
+    <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+                <button class="mdc-tab mdc-tab--active" role="tab"  aria-selected="true" tabindex="0" onclick="window.location.href='/blog/'" id="mdc-tab-1">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Page 1</span>
+                    </span>
+                    <span class="mdc-tab-indicator mdc-tab-indicator--active">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                </button>
             </div>
         </div>
     </div>
+</nav>
+
+<h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
+
+<div class="mdc-layout-grid__inner">
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-6/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">Last one...
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">Promise?</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-5/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">I think this is enough dummy data for now, don't you?
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">I'm done. Really.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-4/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">Really? Again?
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">Laa dee daaaaaaa...</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-3/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">Yet another example post
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">I hope you get the idea by now. It'll get repetitive the more we do this. Very, very, repetitive. I think I need to sleep.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-2/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">Another example post
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">This is my second ever blog post.</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="mdc-layout-grid__cell">
+        <div class="mdc-card">
+            <div class="mdc-card__primary-action" onclick="window.location.href='/blog/example-1/'">
+                <div class="article-card__primary">
+                    <h2 class="article-card_title mdc-typography mdc-typography--headline5">An example post
+                    </h2>
+                    <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                        2020-03-17</h3>
+                </div>
+                <div class="article-card__secondary mdc-typography mdc-typography--body1">This is my first ever blog post.</div>
+            </div>
+        </div>
+    </div>
+    
 </div>
 
                         </div>

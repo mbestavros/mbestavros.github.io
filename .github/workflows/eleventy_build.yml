@@ -1,6 +1,6 @@
 # Deployment action from https://github.com/TartanLlama/actions-eleventy/
 
-name: Eleventy Build
+name: Eleventy Build/Deploy
 on:
     push:
         branches:

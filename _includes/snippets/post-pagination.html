@@ -1,0 +1,36 @@
+{% comment %}
+This is the design of the page selection carousel, visible at the top of blog pages.
+In order to use it, `currentCollection` and `linkHead` must be set -- see blog.html for details.
+{% endcomment %}
+
+{% comment %}
+This is a hack to hide the page selector when there's only one page.
+{% endcomment %}
+{% for currentPage in currentCollection %}            
+{% if currentPage.tagName == tag.tagName and currentPage.pageNumber == 1 %}
+
+<nav class="mdc-tab-bar article-page-list" role="tablist">
+    <div class="mdc-tab-scroller">
+        <div class="mdc-tab-scroller__scroll-area">
+            <div class="mdc-tab-scroller__scroll-content">
+                {% for currentPage in currentCollection %}            
+                {% if currentPage.tagName == tag.tagName %}
+                {% if tag.pageNumber == currentPage.pageNumber %}{% assign selected = true %}{% else %}{% assign selected = false %}{% endif %}
+                <button class="mdc-tab {% if selected %}mdc-tab--active{% endif %}" role="tab" {% if selected %} aria-selected="true"{% else %} aria-selected="false"{% endif %} {% if tag.pageNumber == 0 %}tabindex="0"{% else %}tabindex="-1"{% endif %} onclick="window.location.href='{{ linkHead }}{% if currentPage.pageNumber!=0 %}{{ currentPage.pageNumber }}/{% endif %}'" id="mdc-tab-{{ currentPage.pageNumber }}">
+                    <span class="mdc-tab__content">
+                        <span class="mdc-tab__text-label">Page {{ currentPage.pageNumber }}</span>
+                    </span>
+                    <span class="mdc-tab-indicator {% if selected %}mdc-tab-indicator--active{% endif %}">
+                        <span class="mdc-tab-indicator__content mdc-tab-indicator__content--underline"></span>
+                    </span>
+                    <span class="mdc-tab__ripple"></span>
+                </button>
+                {% endif %}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</nav>
+
+{% endif %}
+{% endfor %}

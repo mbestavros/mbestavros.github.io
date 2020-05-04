@@ -1,0 +1,26 @@
+---
+layout: layouts/default
+pagination:
+  data: collections.blogPages
+  size: 1
+  alias: tag
+permalink: /blog/{% if tag.pageNumber!=0 %}{{ tag.pageNumber }}/{% endif %}
+---
+
+{% comment %}
+In order for the pagination list to work, we need to set up two things:
+- currentCollection: the collection we want to iterate over (e.g. blog pages or tag pages)
+- linkHead: the head of the pagination link (e.g. `/blog/` or `/blog/tags/tech/`)
+{% endcomment %}
+{% assign currentCollection = collections.blogPages %}
+{% capture linkHead %}/blog/{% endcapture %}
+
+{% include snippets/post-pagination.html %}
+
+<h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
+
+<div class="mdc-layout-grid__inner">
+    {% for post in tag.pageData %}
+    {% include snippets/post-card.html %}
+    {% endfor %}
+</div>

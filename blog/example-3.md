@@ -2,6 +2,9 @@
 layout: layouts/post
 title: Yet another example post
 subtitle: I hope you get the idea by now. It'll get repetitive the more we do this. Very, very, repetitive. I think I need to sleep.
+tags:
+    - tech
+    - reviews
 --- 
 # {{ title }} 
   

@@ -2,6 +2,8 @@
 layout: layouts/post
 title: An example post
 subtitle: This is my first ever blog post.
+tags:
+    - tech
 --- 
 # {{ title }} 
   

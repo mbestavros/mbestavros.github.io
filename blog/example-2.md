@@ -2,6 +2,8 @@
 layout: layouts/post
 title: Another example post
 subtitle: This is my second ever blog post.
+tags:
+    - reviews
 --- 
 # {{ title }} 
   

@@ -2,6 +2,8 @@
 layout: layouts/post
 title: Really? Again?
 subtitle: Laa dee daaaaaaa...
+tags:
+    - reviews
 --- 
 # {{ title }} 
   

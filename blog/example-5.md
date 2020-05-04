@@ -2,6 +2,8 @@
 layout: layouts/post
 title: I think this is enough dummy data for now, don't you?
 subtitle: I'm done. Really.
+tags:
+    - reviews
 --- 
 # {{ title }} 
   

@@ -2,6 +2,8 @@
 layout: layouts/post
 title: Last one...
 subtitle: Promise?
+tags:
+    - reviews
 --- 
 # {{ title }} 
   

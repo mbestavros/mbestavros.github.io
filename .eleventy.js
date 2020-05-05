@@ -61,7 +61,7 @@ function createFilteredCollection(collection, paginationSize, filter_tags, inver
     let tagMap = [];
     let tagArray = [...tagSet];
     for( let tagName of tagArray) {
-        let tagItems = collection.getFilteredByTag(tagName);
+        let tagItems = collection.getFilteredByTag(tagName).reverse();
         let pagedItems = lodashChunk(tagItems, paginationSize);
         for( let pageNumber = 0, max = pagedItems.length; pageNumber < max; pageNumber++) {
             tagMap.push({

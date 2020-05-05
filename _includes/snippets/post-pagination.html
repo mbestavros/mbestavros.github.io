@@ -9,7 +9,7 @@ This is a hack to hide the page selector when there's only one page.
 {% for currentPage in currentCollection %}            
 {% if currentPage.tagName == tag.tagName and currentPage.pageNumber == 1 %}
 
-<nav class="mdc-tab-bar article-page-list" role="tablist">
+<nav class="mdc-tab-bar post-page-list" role="tablist" id="post-page-list">
     <div class="mdc-tab-scroller">
         <div class="mdc-tab-scroller__scroll-area">
             <div class="mdc-tab-scroller__scroll-content">

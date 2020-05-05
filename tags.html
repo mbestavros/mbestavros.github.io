@@ -1,0 +1,30 @@
+---
+layout: layouts/default
+permalink: /blog/tags/
+---
+
+<h1 class="mdc-typography mdc-typography--headline2">All Tags</h1>
+
+<div class="mdc-chip-set" role="grid">
+    {% for tag in collections.uniqueTags %}
+    <div class="mdc-chip" role="row" onclick="window.location.href='/blog/tags/{{ tag }}'">
+        <div class="mdc-chip__ripple"></div>
+        <span role="gridcell">
+            <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                <span class="mdc-chip__text">{{ tag }}</span>
+            </span>
+        </span>
+    </div>
+    {% endfor %}
+</div>
+
+<footer>
+    <div class="post-list-fabs">
+        <button class="mdc-fab mdc-fab--extended post-list-fab" aria-label="Favorite"
+            onclick="window.location.href='/blog/'">
+            <div class="mdc-fab__ripple"></div>
+            <span class="mdc-fab__icon material-icons">library_books</span>
+            <span class="mdc-fab__label">Main Blog</span>
+        </button>
+    </div>
+</footer>

@@ -22,7 +22,12 @@ module.exports = function (eleventyConfig) {
 
     eleventyConfig.addCollection("tagPages", function(collection) {
         return createFilteredCollection(collection, paginationSize, blog_tag, true);
-        
+    });
+
+    // Create a collection with all unique tags.
+    eleventyConfig.addCollection("uniqueTags", function(collection) {
+        let temp = getUniqueTags(collection, blog_tag, true);
+        return Array.from(temp);
     });
 
     return {
@@ -50,19 +55,7 @@ function createFilteredCollection(collection, paginationSize, filter_tags, inver
     var lodashChunk = require('lodash.chunk');
 
     // Get unique list of tags
-    let tagSet = new Set();
-    collection.getAllSorted().map(function(item) {
-        if( "tags" in item.data ) {
-            let tags = item.data.tags;
-
-            // Include or exclude tag pages based on what include is.
-            for (let tag of tags) {
-                if((!inverse && filter_tags.includes(tag)) || (inverse && !(filter_tags.includes(tag)))) {
-                    tagSet.add(tag);
-                }
-            }
-        }
-    });
+    let tagSet = getUniqueTags(collection, filter_tags, inverse);
 
     // Get each item that matches the tag
     let tagMap = [];
@@ -100,4 +93,23 @@ function createFilteredCollection(collection, paginationSize, filter_tags, inver
     */
     // console.log( tagMap );
     return tagMap;
+}
+
+// Part of the function from https://github.com/11ty/eleventy/issues/332, split out to make it usable on its own.
+function getUniqueTags(collection, filter_tags, inverse=false) {
+    let tagSet = new Set();
+    collection.getAllSorted().map(function(item) {
+        if( "tags" in item.data ) {
+            let tags = item.data.tags;
+
+            // Include or exclude tag pages based on what include is.
+            for (let tag of tags) {
+                
+                if((!inverse && filter_tags.includes(tag)) || (inverse && !(filter_tags.includes(tag)))) {
+                    tagSet.add(tag);
+                }
+            }
+        }
+    });
+    return tagSet;
 }

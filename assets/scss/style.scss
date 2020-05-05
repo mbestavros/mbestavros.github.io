@@ -87,3 +87,13 @@ body {
   max-width: 100%;
   height: auto;
 }
+
+// Styles for bottom FABs on post lists
+.post-list-fabs {
+  padding: 8px;
+  text-align: center;
+}
+
+.post-list-fab {
+  margin: 8px 8px;
+}

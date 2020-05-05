@@ -20,7 +20,18 @@ In order for the pagination list to work, we need to set up two things:
 <h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
 
 <div class="mdc-layout-grid__inner">
-    {% for post in tag.pageData %}
-    {% include snippets/post-card.html %}
-    {% endfor %}
+  {% for post in tag.pageData %}
+  {% include snippets/post-card.html %}
+  {% endfor %}
 </div>
+
+<footer>
+  <div class="post-list-fabs">
+    <button class="mdc-fab mdc-fab--extended post-list-fab" aria-label="Favorite"
+      onclick="window.location.href='/blog/tags/'">
+      <div class="mdc-fab__ripple"></div>
+      <span class="mdc-fab__icon material-icons">label</span>
+      <span class="mdc-fab__label">All Tags</span>
+    </button>
+  </div>
+</footer>

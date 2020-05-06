@@ -75,6 +75,10 @@ body {
 }
 
 // Card styles for home
+.home-card__title {
+  text-align: center;
+}
+
 .home-card__primary {
   padding: 16px;
 }
@@ -90,6 +94,24 @@ body {
 
 .home-page-fab {
   margin: 8px 8px;
+}
+
+// Card styles for home
+.about-card__title {
+  text-align: center;
+}
+
+.about-card__primary {
+  padding: 16px;
+}
+
+.about-card__secondary {
+  padding: 16px;
+}
+
+// Style for post page listing
+.post-page-list {
+  padding-bottom: 16px
 }
 
 // Card styles for article listing

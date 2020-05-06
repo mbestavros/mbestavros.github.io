@@ -7,6 +7,8 @@ pagination:
 permalink: /blog/{% if tag.pageNumber!=0 %}{{ tag.pageNumber }}/{% endif %}
 ---
 
+<h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
+
 {% comment %}
 In order for the pagination list to work, we need to set up two things:
 - currentCollection: the collection we want to iterate over (e.g. blog pages or tag pages)
@@ -16,8 +18,6 @@ In order for the pagination list to work, we need to set up two things:
 {% capture linkHead %}/blog/{% endcapture %}
 
 {% include snippets/post-pagination.html %}
-
-<h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
 
 <div class="mdc-layout-grid__inner">
   {% for post in tag.pageData %}

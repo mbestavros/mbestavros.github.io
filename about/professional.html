@@ -3,43 +3,127 @@ layout: layouts/default
 ---
 
 <div class="home">
-    <div class="mdc-card home-card">
-        <div class="mdc-card__media mdc-card__media--16-9 home-card__media"
-            style="background-image: url(/assets/img/profile_fall_2019.JPG)"></div>
-        <div class="home-card__primary">
-            <h2 class="home-card__title mdc-typography mdc-typography--headline4">Hey there! I'm Mark.</h2>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">I'm a Boston-based software engineer,
-                currently working at Red Hat on the Enarx project. I graduated from Boston University in 2019 with a
-                combined BA/MS in Computer Science.</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">If you'd like to know more about me,
-                what I do, and what I enjoy, have a look at my detailed About page on the top navbar. If you're
-                interested in reading my thoughts on various topics (usually technology related), check out my blog,
-                also linked up top. (NOTE: both these pages are WIP. The blog is live as a prototype, if you want to see
-                how that will look.)</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">Otherwise, I've also included a few
-                places you can find me just below.</h3>
-            <h3 class="home-card__subtitle mdc-typography mdc-typography--body1">Thanks for stopping by!</h3>
+    <h1 class="mdc-typography mdc-typography--body1">Please note: I've chosen to highlight my most recent and relevant
+        experiences here. A full summary is available in my resume (linked at the bottom).</h1>
+    <div class="mdc-layout-grid__inner about-landing-cards">
+        <h1 class="mdc-typography mdc-typography--headline2">Work</h1>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet">
+            <div class="mdc-card resume-card horizontal-card">
+                <div class="horizontal-card__content">
+                    <div class="resume-card__primary">
+                        <h2
+                            class="resume-card__title horizontal-card__title-top mdc-typography mdc-typography--headline4">
+                            Current: Red Hat</h2>
+                    </div>
+                    <div class="mdc-card__media mdc-card__media--square horizontal-card__media"
+                        style="background-image: url(https://raw.githubusercontent.com/enarx/enarx.github.io/master/assets/images/enarx-white.svg)">
+                    </div>
+                    <div class="resume-card__secondary">
+                        <h2 class="resume-card__title horizontal-card__title mdc-typography mdc-typography--headline4">
+                            Current: Red Hat</h2>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I've been at Red Hat
+                            since October 2018, when I joined as a part-time intern while finishing up my graduate
+                            studies at Boston University. I moved to full-time in June 2019.</h3>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I'm currently working on
+                            Enarx, a project aiming to provide an abstraction layer across different implementations of
+                            trusted execution environments (TEEs) from major hardware vendors, like Intel SGX and AMD
+                            SEV. This will allow developers to write applications for third-party cloud vendors without
+                            needing to trust the host's stack.</h3>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">The project's goal is to
+                            make developing for TEEs not just easier, but more portable. You shouldn't need to rewrite
+                            (or even recompile) your app for a different TEE.</h3>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">The project is fully
+                            open-source and open-process: all our meetings and issue tracking are public, and you can
+                            find out more at https://enarx.io.</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet">
+            <div class="mdc-card resume-card">
+                <div class="resume-card__primary">
+                    <h2 class="resume-card__title mdc-typography mdc-typography--headline4">Summer 2018: MITRE</h2>
+                </div>
+                <!--<div class="mdc-card__media mdc-card__media--16-9"
+                    style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/d/d3/Mitre_Corporation_logo.svg); margin: auto; width: 30%; height: 30%;">
+                </div>-->
+                <div class="resume-card__secondary">
+                    <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I interned at MITRE during
+                        the summer of 2018, working in their Agile Software Engineering division.</h3>
+                    <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I worked on the Provider
+                        Screening Module, an open-source project to screen healthcare providers for eligibility in
+                        different states. I also contributed to FluxNotes, another open-source project to create
+                        structured data out of clinical notes.</h3>
+                    <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I was also fortunate enough
+                        to participate in the MITRE eCTF for summer interns.</h3>
+                </div>
+            </div>
+        </div>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet">
+            <div class="mdc-card resume-card">
+                <div class="resume-card__primary">
+                    <h2 class="resume-card__title mdc-typography mdc-typography--headline4">Summer 2017: VMware</h2>
+                </div>
+                <!--<div class="mdc-card__media mdc-card__media--16-9"
+                    style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/9a/Vmware.svg); margin: auto; width: 30%; height: 30%;">
+                </div>-->
+                <div class="resume-card__secondary">
+                    <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I interned at VMware for the
+                        summer of 2017 in their Cambridge (now Boston) office.</h3>
+                    <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">While there, I worked on
+                        prototyping the company's Workspace ONE Android app, a BYOD mobile device management solution
+                        for businesses to deploy workplace apps on employee personal phones.</h3>
+                </div>
+            </div>
+        </div>
+        <h1 class="mdc-typography mdc-typography--headline2">Education</h1>
+        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12-desktop mdc-layout-grid__cell--span-8-tablet">
+            <div class="mdc-card resume-card horizontal-card">
+                <div class="horizontal-card__content">
+                    <div class="resume-card__primary">
+                        <h2
+                            class="resume-card__title horizontal-card__title-top mdc-typography mdc-typography--headline4">
+                            BA/MS, Computer Science: Boston University</h2>
+                    </div>
+                    <div class="mdc-card__media mdc-card__media--square horizontal-card__media"
+                        style="background-image: url(https://upload.wikimedia.org/wikipedia/commons/f/f5/Boston_University_seal.svg)">
+                    </div>
+                    <div class="resume-card__secondary">
+                        <h2 class="resume-card__title horizontal-card__title mdc-typography mdc-typography--headline4">
+                            BA/MS, Computer Science: Boston University</h2>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I attended Boston
+                            University from fall 2014 to spring 2019 for my combined BA/MS in Computer Science.</h3>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">A few cousework
+                            highlights include:
+                            <ul>
+                                <li>Network Security: cryptography and infosec best practices with a mindfulness for
+                                    real-world implications</li>
+                                <li>Applied Cryptography: design and implementation of different crypto systems, in
+                                    addition to studying practical side-channel attacks and other vulnerabilities</li>
+                                <li>National Security and Technoogy: an experimental course, cross-registered with BU
+                                    Law, where CS students cross-pollinate with Law students to understand how law
+                                    interacts with technology and vice versa, with a particular focus on espionage,
+                                    hacking, and cybersecurity</li>
+                                <li>Data Mechanics: a project course where groups use data science to solve real-world
+                                    problems facing cities</li>
+                            </ul>
+                        </h3>
+                        <h3 class="resume-card__subtitle mdc-typography mdc-typography--body1">I was also heavily
+                            involved with BU CS' extracurricular community, particularly in clubs like BUILDS (a
+                            student-run makerspace where I was on the e-board for two years) and BostonHacks (BU's
+                            yearly hackathon, which I helped organize from the very first event in 2015).</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <footer>
         <div class="home-page-fabs">
-            <button class="home-page-fab mdc-fab mdc-fab--extended" aria-label="Github" id="home-github-button"
+            <button class="home-page-fab mdc-fab mdc-fab--extended" aria-label="Resume" id="about-resume-button"
                 onclick="window.location.href='https://github.com/mbestavros'">
                 <div class="mdc-fab__ripple"></div>
-                <span class="mdc-fab__icon material-icons">code</span>
-                <span class="mdc-fab__label">Github</span>
-            </button>
-            <button class="home-page-fab mdc-fab mdc-fab--extended" aria-label="LinkedIn" id="home-linkedin-button"
-                onclick="window.location.href='https://www.linkedin.com/in/mbestavros/'">
-                <div class="mdc-fab__ripple"></div>
-                <span class="mdc-fab__icon material-icons">work</span>
-                <span class="mdc-fab__label">LinkedIn</span>
-            </button>
-            <button class="home-page-fab mdc-fab mdc-fab--extended" aria-label="Twitter" id="home-twitter-button"
-                onclick="window.location.href='https://twitter.com/MBestavros'">
-                <div class="mdc-fab__ripple"></div>
-                <span class="mdc-fab__icon material-icons">create</span>
-                <span class="mdc-fab__label">Twitter</span>
+                <span class="mdc-fab__icon material-icons">description</span>
+                <span class="mdc-fab__label">Full Resume</span>
             </button>
         </div>
     </footer>

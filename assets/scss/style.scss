@@ -96,7 +96,7 @@ body {
   margin: 8px 8px;
 }
 
-// Card styles for home
+// Card styles for about page
 .about-card__title {
   text-align: center;
 }
@@ -107,6 +107,53 @@ body {
 
 .about-card__secondary {
   padding: 16px;
+}
+
+// Card styles for about subpages
+.resume-card__title {
+  text-align: center;
+}
+
+.resume-card__primary {
+  padding: 16px;
+}
+
+.resume-card__secondary {
+  padding: 16px;
+}
+
+// Styles for horizontal cards
+
+/* BREAKPOINT min-width:900px */
+.horizontal-card .horizontal-card__content {
+  display: flex;
+  flex-direction: row;
+}
+.horizontal-card__title {
+  display: block;
+}
+.horizontal-card__title-top {
+  display: none;  
+}
+
+/* BREAKPOINT max-width:900px */
+@media (max-width: 900px) {
+  .horizontal-card .horizontal-card__content {
+    display: block;
+  }
+  .horizontal-card__title {
+    display: none;
+  }
+  .horizontal-card__title-top {
+    display: block;
+  }
+}
+
+.horizontal-card__media {
+  margin: auto;
+  padding: 16px;
+  width: 25%;
+  height: 25%;
 }
 
 // Style for post page listing

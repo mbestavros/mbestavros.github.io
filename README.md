@@ -18,3 +18,12 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 - @TartanLlama's [Github Action](https://github.com/TartanLlama/actions-eleventy/) for deploying Eleventy to Github Pages
 - [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively
 - [Webpack](https://webpack.js.org/) for bundling and compiling SCSS/JS
+
+## License
+
+The majority of this project is licensed under Apache 2.0.
+
+The exception is all content in the `/assets/img/` directory, which includes either:
+
+- content I do not own the rights to that I am using with permission
+- my own content, for which I reserve all rights

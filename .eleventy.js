@@ -1,5 +1,6 @@
 module.exports = function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("assets/img");
+    eleventyConfig.addPassthroughCopy("CNAME")
     eleventyConfig.setDataDeepMerge(true);
 
     /*

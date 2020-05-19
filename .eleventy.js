@@ -1,7 +1,56 @@
+const pluginLocalRespimg = require('eleventy-plugin-local-respimg');
+
 module.exports = function (eleventyConfig) {
+    
+    // Miscellaneous quick Eleventy config options
     eleventyConfig.addPassthroughCopy("assets/img");
     eleventyConfig.addPassthroughCopy("CNAME")
     eleventyConfig.setDataDeepMerge(true);
+
+    // Responsive images with https://github.com/chromeos/static-site-scaffold-modules/tree/master/modules/eleventy-plugin-local-respimg
+    eleventyConfig.addPlugin(pluginLocalRespimg, {
+        folders: {
+          source: '_site', // Folder images are stored in
+          output: '_site', // Folder images should be output to
+        },
+        images: {
+          resize: {
+            min: 250, // Minimum width to resize an image to
+            max: 1500, // Maximum width to resize an image to
+            step: 150, // Width difference between each resized image
+          },
+          gifToVideo: false, // Convert GIFs to MP4 videos
+          sizes: '100vw', // Default image `sizes` attribute
+          lazy: true, // Include `loading="lazy"` attribute for images
+          additional: [
+            // Globs of additional images to optimize (won't be resied)
+            'assets/img',
+          ],
+          watch: {
+            src: 'assets/img', // Glob of images that Eleventy should watch for changes to
+          },
+          pngquant: {
+            /* ... */
+          }, // imagemin-pngquant options
+          mozjpeg: {
+            /* ... */
+          }, // imagemin-mozjpeg options
+          svgo: {
+            /* ... */
+          }, // imagemin-svgo options
+          gifresize: {
+            /* ... */
+          }, // @gumlet/gif-resize options
+          webp: {
+            /* ... */
+          }, // imagemin-webp options
+          gifwebp: {
+            /* ... */
+          }, // imagemin-gif2webp options
+        },
+      });
+
+
 
     /*
     --- WORKAROUND FOR DOUBLE PAGINATION: see https://github.com/11ty/eleventy/issues/332 ---

@@ -79,6 +79,16 @@ body {
   text-align: center;
 }
 
+.home-card__media {
+  overflow: hidden;
+}
+
+.home-card__media img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
 .home-card__primary {
   padding: 16px;
 }

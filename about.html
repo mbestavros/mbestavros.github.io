@@ -8,8 +8,8 @@ layout: layouts/default
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <div class="mdc-card about-card">
                 <div class="mdc-card__primary-action" onclick="window.location.href='/about/professional/'">
-                    <div class="mdc-card__media mdc-card__media--16-9 home-card__media"
-                        style="background-image: url(/assets/img/Logo-RedHat-B-Color-RGB.png); background-size: auto 100%;">
+                    <div class="mdc-card__media card-local-media">
+                        {% responsiveImage, "img/Logo-RedHat-B-Color-RGB.png", "" %}
                     </div>
                     <div class="about-card__primary">
                         <h2 class="about-card__title mdc-typography mdc-typography--headline4">Professional</h2>
@@ -23,8 +23,9 @@ layout: layouts/default
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
             <div class="mdc-card about-card">
                 <div class="mdc-card__primary-action" onclick="window.location.href='/about/personal/'">
-                    <div class="mdc-card__media mdc-card__media--16-9 home-card__media"
-                        style="background-image: url(/assets/img/personal/boston-skyline-june2019.jpg)"></div>
+                    <div class="mdc-card__media card-local-media">
+                        {% responsiveImage, "img/personal/boston-skyline-june2019.jpg", "" %}
+                    </div>
                     <div class="about-card__primary">
                         <h2 class="about-card__title mdc-typography mdc-typography--headline4">Personal</h2>
                         <h3 class="about-card__subtitle mdc-typography mdc-typography--body1">I play the trombone. I'm a

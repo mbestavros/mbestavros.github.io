@@ -25,10 +25,6 @@ module.exports = function (eleventyConfig) {
             cacheDuration: "1d"
         };
         let stats = await Image(src, options);
-        console.log("this is stats.jpeg");
-        console.log(stats.jpeg);
-        console.log("this is stats.jpeg 0");
-        console.log(stats.jpeg[0]);
         let lowestSrc = stats.jpeg[0];
         let sizes = "70vw"; // Make sure you customize this!
 

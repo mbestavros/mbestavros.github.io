@@ -23,7 +23,7 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 
 The majority of this project is licensed under Apache 2.0.
 
-The exception is all content in the `/assets/img/` directory, which includes either:
+The exception is all content in the `img` directory, which includes either:
 
 - content I do not own the rights to that I am using with permission
 - my own content, for which I reserve all rights

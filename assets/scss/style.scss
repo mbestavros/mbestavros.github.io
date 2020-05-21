@@ -97,6 +97,48 @@ body {
   object-fit: cover;
 }
 
+.card-local-media--16-9 {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-local-media--16-9::after {
+  display: block;
+    content: '';
+    /* 16:9 aspect ratio */
+    padding-bottom: 56.25%;
+}
+
+.card-local-media--16-9 img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-local-media--square {
+  position: relative;
+  overflow: hidden;
+}
+
+.card-local-media--square::after {
+  display: block;
+    content: '';
+    /* 16:9 aspect ratio */
+    padding-bottom: 100%;
+}
+
+.card-local-media--square img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .home-page-fabs {
   padding: 8px;
   text-align: center;

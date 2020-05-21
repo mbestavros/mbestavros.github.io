@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
         options = {
             // Array of widths
             // Optional: use falsy value to fall back to native image size
-            widths: [150, 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500],
+            widths: [150, 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950],
 
             // Pass any format supported by sharp
             formats: ["webp", "jpeg"], //"png"

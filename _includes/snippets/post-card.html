@@ -5,13 +5,13 @@ This is the design of each post card.
 <div class="mdc-layout-grid__cell">
     <div class="mdc-card">
         <div class="mdc-card__primary-action" onclick="window.location.href='{{ post.url }}'">
-            <div class="article-card__primary">
-                <h2 class="article-card_title mdc-typography mdc-typography--headline5">{{ post.data.title }}
+            <div class="card--primary">
+                <h2 class="card--title mdc-typography mdc-typography--headline5">{{ post.data.title }}
                 </h2>
                 <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
                     {{ post.date | date: "%Y-%m-%d" }}</h3>
             </div>
-            <div class="article-card__secondary mdc-typography mdc-typography--body1">{{ post.data.subtitle }}</div>
+            <div class="card--secondary mdc-typography mdc-typography--body1">{{ post.data.subtitle }}</div>
         </div>
         {% if post.data.tags.size > 1 %}
         <div class="mdc-card__actions">

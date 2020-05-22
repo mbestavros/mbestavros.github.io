@@ -6,13 +6,13 @@ layout: layouts/default
     <h1 class="mdc-typography mdc-typography--headline2">About Me</h1>
     <div class="mdc-layout-grid__inner about-landing-cards">
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-            <div class="mdc-card about-card">
+            <div class="mdc-card card">
                 <div class="mdc-card__primary-action" onclick="window.location.href='/about/professional/'">
-                    <div class="mdc-card__media card-local-media">
+                    <div class="mdc-card__media card-local-media card-padded-media" style="background-color: white;">
                         {% responsiveImage, "img/Logo-RedHat-B-Color-RGB.png", "" %}
                     </div>
-                    <div class="about-card__primary">
-                        <h2 class="about-card__title mdc-typography mdc-typography--headline4">Professional</h2>
+                    <div class="card--primary">
+                        <h2 class="card--title mdc-typography mdc-typography--headline4">Professional</h2>
                         <h3 class="about-card__subtitle mdc-typography mdc-typography--body1">I'm currently working at
                             Red Hat. I'm interested in security and privacy, and how it can scale to the cloud. I
                             graduated from Boston University in 2019 with a combined BA/MS in Computer Science.</h3>
@@ -21,13 +21,13 @@ layout: layouts/default
             </div>
         </div>
         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-            <div class="mdc-card about-card">
+            <div class="mdc-card card">
                 <div class="mdc-card__primary-action" onclick="window.location.href='/about/personal/'">
                     <div class="mdc-card__media card-local-media--16-9">
                         {% responsiveImage, "img/personal/boston-skyline-june2019.jpg", "" %}
                     </div>
-                    <div class="about-card__primary">
-                        <h2 class="about-card__title mdc-typography mdc-typography--headline4">Personal</h2>
+                    <div class="card--primary">
+                        <h2 class="card--title mdc-typography mdc-typography--headline4">Personal</h2>
                         <h3 class="about-card__subtitle mdc-typography mdc-typography--body1">I play the trombone. I'm a
                             gamer. I love talking tech. I'm a big Trekkie. I like trains.</h3>
                     </div>
@@ -38,8 +38,8 @@ layout: layouts/default
 
 
     <footer>
-        <div class="home-page-fabs">
-            <button class="home-page-fab mdc-fab mdc-fab--extended" aria-label="Resume" id="about-resume-button"
+        <div class="fabs">
+            <button class="fab mdc-fab mdc-fab--extended" aria-label="Resume" id="about-resume-button"
                 onclick="window.location.href='https://github.com/mbestavros'">
                 <div class="mdc-fab__ripple"></div>
                 <span class="mdc-fab__icon material-icons">description</span>

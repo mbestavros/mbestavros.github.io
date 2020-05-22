@@ -1,23 +1,28 @@
 <header class="mdc-top-app-bar app-bar drawer-top-app-bar" id="app-bar">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
-      <a href="/" class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button">home</a>
+      <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
+        onclick="window.location.href='/'">home</button>
       <span class="mdc-top-app-bar__title">Mark Bestavros</span>
     </section>
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-end" role="toolbar">
       <nav class="navList">
-        <li class="navListItem"><a
+        <li class="navListItem">
+          <button
             class="navListLink mdc-typography--button mdc-top-app-bar__action-item mdc-button mdc-button--unelevated"
-            id="about-button" href="/about/">
+            id="about-button" onclick="window.location.href='/about/'">
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">About</span>
-          </a></li>
-        <li class="navListItem"><a
+          </button>
+        </li>
+        <li class="navListItem">
+          <button
             class="navListLink mdc-typography--button mdc-top-app-bar__action-item mdc-button mdc-button--unelevated"
-            id="blog-button" href="/blog/">
+            id="blog-button" onclick="window.location.href='/blog/'">
             <div class="mdc-button__ripple"></div>
             <span class="mdc-button__label">Blog</span>
-          </a></li>
+          </button>
+        </li>
       </nav>
     </section>
   </div>

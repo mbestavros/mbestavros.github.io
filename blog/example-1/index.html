@@ -63,10 +63,7 @@
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
                             <div class="mdc-card card">
     <div class="post-content mdc-typography mdc-typography--body1">
-        <script>
-        document.title = "An example post";
-            </script>
-<h1>An example post</h1>
+        <h1>An example post</h1>
 <p>This is my special place on the big World Wide Web.</p>
 <h2>Here's a subheader</h2>
 <p>And some more text! Yay!</p>
@@ -76,6 +73,13 @@ It is a long established fact that a reader will be distracted by the readable c
 <h3>And an image!</h3>
 <img class="post-image" src = 'https://66.media.tumblr.com/d9a3ce2eb39c98d1f81dfc8b5ad266f8/tumblr_mv4uuywedA1rw4rkuo4_r2_400.gif'>
 <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+<script>
+        document.title = "An example post";
+var meta = document.createElement('meta');
+meta.name = "description";
+meta.content = "This is my first ever blog post.";
+document.getElementsByTagName('head')[0].appendChild(meta);
+            </script>
 
     </div>
 </div>

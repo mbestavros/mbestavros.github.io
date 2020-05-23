@@ -2,7 +2,7 @@
 layout: layouts/post
 title: An example post
 subtitle: This is my first ever blog post.
-header-image: img/personal/profile_fall_2019.JPG
+header-image: content/personal/profile_fall_2019.JPG
 tags:
     - tech
 --- 

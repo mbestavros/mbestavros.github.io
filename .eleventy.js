@@ -1,6 +1,6 @@
 const Image = require("@11ty/eleventy-img");
 module.exports = function (eleventyConfig) {
-    eleventyConfig.addPassthroughCopy("img");
+    eleventyConfig.addPassthroughCopy("content");
     eleventyConfig.addPassthroughCopy("CNAME")
     eleventyConfig.setDataDeepMerge(true);
 
@@ -83,10 +83,10 @@ async function responsiveImages(src, alt) {
         formats: ["webp", "jpeg"], //"png"
 
         // the directory in the image URLs <img src="/img/MY_IMAGE.png">
-        urlPath: "/img/responsive/",
+        urlPath: "/content/responsive/",
 
         // the path to the directory on the file system to write the image files to disk
-        outputDir: "_site/img/responsive/",
+        outputDir: "_site/content/responsive/",
 
         // eleventy-cache-assets
         // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server

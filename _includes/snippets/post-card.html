@@ -5,10 +5,15 @@ This is the design of each post card.
 <div class="mdc-layout-grid__cell">
     <div class="mdc-card">
         <div class="mdc-card__primary-action" onclick="window.location.href='{{ post.url }}'">
+            {% if post.data.header-image %}
+            <div class="mdc-card__media card-local-media--16-9">
+                {% responsiveImage, post.data.header-image, "" %}
+            </div>
+            {% endif %}
             <div class="card--primary">
                 <h2 class="card--title mdc-typography mdc-typography--headline5">{{ post.data.title }}
                 </h2>
-                <h3 class="article-card__subtitle mdc-typography mdc-typography--subtitle2">
+                <h3 class="card--subtitle mdc-typography mdc-typography--subtitle2">
                     {{ post.date | date: "%Y-%m-%d" }}</h3>
             </div>
             <div class="card--secondary mdc-typography mdc-typography--body1">{{ post.data.subtitle }}</div>

@@ -6,55 +6,29 @@ module.exports = function (eleventyConfig) {
 
     // Shortcode for responsive images with eleventy-img
     eleventyConfig.addShortcode("responsiveImage", async function (src, alt) {
-        options = {
-            // Array of widths
-            // Optional: use falsy value to fall back to native image size
-            widths: [150, 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950],
-
-            // Pass any format supported by sharp
-            formats: ["webp", "jpeg"], //"png"
-
-            // the directory in the image URLs <img src="/img/MY_IMAGE.png">
-            urlPath: "/img/responsive/",
-
-            // the path to the directory on the file system to write the image files to disk
-            outputDir: "_site/img/responsive/",
-
-            // eleventy-cache-assets
-            // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server
-            cacheDuration: "1d"
-        };
-        let stats = await Image(src, options);
-        let lowestSrc = stats.jpeg[0];
-        let sizes = "70vw"; // Make sure you customize this!
-
-        if (alt === undefined) {
-            // You bet we throw an error on missing alt (alt="" works okay)
-            throw new Error(`Missing \`alt\` on myResponsiveImage from: ${src}`);
-        }
-
-        // Iterate over formats and widths
-        return `<picture>
-      ${Object.values(stats).map(imageFormat => {
-            return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => `${entry.url} ${entry.width}w`).join(", ")}" sizes="${sizes}">`;
-        }).join("\n")}
-            <img
-            alt="${alt}"
-            src="${lowestSrc.url}"
-            width="${lowestSrc.width}"
-            height="${lowestSrc.height}">
-            </picture>`;
+        return await responsiveImages(src, alt);
     });
 
     // Shortcode for adding title and description dynamically via JS
     eleventyConfig.addShortcode("pageMetadata", async function (title, description) {
         return `<script>
-        document.title = "${title}";
-var meta = document.createElement('meta');
-meta.name = "description";
-meta.content = "${description}";
-document.getElementsByTagName('head')[0].appendChild(meta);
-            </script>`;
+            document.title = "${title}";
+            var meta = document.createElement('meta');
+            meta.name = "description";
+            meta.content = "${description}";
+            document.getElementsByTagName('head')[0].appendChild(meta);
+        </script>`;
+    });
+
+    // Shortcode for retroactively inserting article info
+    eleventyConfig.addShortcode("articleSetHeaders", async function (title, subtitle, header) {
+        return `<script>
+            document.getElementById("article-title").textContent="${title}";
+            document.getElementById("article-subtitle").textContent="${subtitle}";
+            document.getElementById("article-titles").insertAdjacentHTML('afterend', \`<div class="mdc-card__media card-local-media--16-9">
+                ${await responsiveImages(header, "")}
+            </div>\`);
+        </script>`;
     });
 
     /*
@@ -92,6 +66,53 @@ document.getElementsByTagName('head')[0].appendChild(meta);
         },
     };
 };
+
+
+// Function to generate and markup responsive images.
+async function responsiveImages(src, alt) {
+    if (!src) {
+        return "";
+    }
+
+    options = {
+        // Array of widths
+        // Optional: use falsy value to fall back to native image size
+        widths: [150, 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950],
+
+        // Pass any format supported by sharp
+        formats: ["webp", "jpeg"], //"png"
+
+        // the directory in the image URLs <img src="/img/MY_IMAGE.png">
+        urlPath: "/img/responsive/",
+
+        // the path to the directory on the file system to write the image files to disk
+        outputDir: "_site/img/responsive/",
+
+        // eleventy-cache-assets
+        // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server
+        cacheDuration: "1d"
+    };
+    let stats = await Image(src, options);
+    let lowestSrc = stats.jpeg[0];
+    let sizes = "70vw"; // Make sure you customize this!
+
+    if (alt === undefined) {
+        // You bet we throw an error on missing alt (alt="" works okay)
+        throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
+    }
+
+    // Iterate over formats and widths
+    return `<picture>
+  ${Object.values(stats).map(imageFormat => {
+        return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => `${entry.url} ${entry.width}w`).join(", ")}" sizes="${sizes}">`;
+    }).join("\n")}
+        <img
+        alt="${alt}"
+        src="${lowestSrc.url}"
+        width="${lowestSrc.width}"
+        height="${lowestSrc.height}">
+        </picture>`;
+}
 
 
 /*

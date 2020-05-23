@@ -46,6 +46,17 @@ module.exports = function (eleventyConfig) {
             </picture>`;
     });
 
+    // Shortcode for adding title and description dynamically via JS
+    eleventyConfig.addShortcode("pageMetadata", async function (title, description) {
+        return `<script>
+        document.title = "${title}";
+var meta = document.createElement('meta');
+meta.name = "description";
+meta.content = "${description}";
+document.getElementsByTagName('head')[0].appendChild(meta);
+            </script>`;
+    });
+
     /*
     --- WORKAROUND FOR DOUBLE PAGINATION: see https://github.com/11ty/eleventy/issues/332 ---
     This allows individual tag categories (a result of pagination themselves) to be paginated.

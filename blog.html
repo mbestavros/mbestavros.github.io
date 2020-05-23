@@ -34,3 +34,5 @@ In order for the pagination list to work, we need to set up two things:
     </button>
   </div>
 </footer>
+{% capture title %}Page {{ tag.pageNumber }} - Mark's Blog{% endcapture %}
+{% pageMetadata, title, "A few of my thoughts." %}

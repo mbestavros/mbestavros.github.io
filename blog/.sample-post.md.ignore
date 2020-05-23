@@ -1,0 +1,24 @@
+--- 
+layout: layouts/post
+title: An example post
+subtitle: A starter template for blog posts.
+header-image: content/personal/profile_fall_2019.JPG
+tags:
+    - tech
+--- 
+# Here's a header
+
+And some text.
+
+## Here's a subheader
+
+And some more text! Yay!
+
+### And an image!
+
+<img class="post-image" src = 'https://66.media.tumblr.com/d9a3ce2eb39c98d1f81dfc8b5ad266f8/tumblr_mv4uuywedA1rw4rkuo4_r2_400.gif'>
+
+The below shortcodes are necessary for properly filling out metadata and titles.
+
+{% articleSetHeaders, title, subtitle, header-image %}
+{% pageMetadata, title, subtitle %}

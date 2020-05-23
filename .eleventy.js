@@ -41,7 +41,7 @@ module.exports = function (eleventyConfig) {
      */
 
     // Variables for input. Set number of posts per page here.
-    var paginationSize = 3;
+    var paginationSize = 6;
     var blog_tag = ['blog'];
 
     // Create both collections.

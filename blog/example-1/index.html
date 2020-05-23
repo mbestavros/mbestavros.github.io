@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mark Bestavros</title>
+    <meta name="Description" content="My personal website.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style>
@@ -61,7 +63,14 @@
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
                             <div class="mdc-card card">
     <div class="post-content mdc-typography mdc-typography--body1">
-        <h1>An example post</h1>
+        <script>
+        document.title = "An example post";
+var meta = document.createElement('meta');
+meta.name = "description";
+meta.content = "This is my first ever blog post.";
+document.getElementsByTagName('head')[0].appendChild(meta);
+            </script>
+<h1>An example post</h1>
 <p>This is my special place on the big World Wide Web.</p>
 <h2>Here's a subheader</h2>
 <p>And some more text! Yay!</p>

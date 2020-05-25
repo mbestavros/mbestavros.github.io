@@ -71,12 +71,18 @@
 <p>It's been a long time coming.</p>
 <p>I've been interested in setting up a portfolio site, if not a full blog, for about two years at this point -- ever since my senior spring in 2018. A personal website almost seems a rite of passage for computer science types; all my classmates and colleagues seemed to have them! And yet, even by my senior year, I hadn't managed to build one for myself.</p>
 <p>So I did! I attended a hackathon (funnily enough, held inside Red Hat's beautiful Boston office, where I now work) and put together a prototype in about a day or so. It wasn't a bad start at all.</p>
-<p>Of course, like many hackathon projects, I ended up leaving the site alone for a while, and ultimately didn't end up polishing or releasing it. But having that exercise in the back of my mind got me thinking: <em>what if I did it properly?</em> At that point, I wasn't super experienced with web development, so I knew I could probably do better if I tried -- and I'd probably learn along the way.</p>
+<p>Of course, like many hackathon projects, I ended up leaving the site alone for a while, and ultimately didn't end up polishing or releasing it. But having that exercise in the back of my mind got me thinking: <em>what if I did it properly?</em> I wasn't super experienced with web development at that point, so I knew I could probably do better if I tried -- and I'd probably learn along the way.</p>
 <p>I stopped and started a few times, but eventually, I did enough research and learning to feel confident in committing to the foundations of what would eventually become this: my very own personal website!</p>
+<p>I kept making small progress on it over the course of a year -- right up until COVID-19 hit. I figured I'd make the best of all the time I'd gotten back from not commuting to just push this across the finish line. And here we are!</p>
 <p>Let's talk a bit about it.</p>
-<h2>Principles</h2>
-<p>I'm a minimalist: I don't like software that does more than it needs to. I also value performance: things should be snappy and fast.</p>
-<p>It's my hope that my site should run <strong>as natively as possible on as many devices as possible</strong>. Though I only have a small set of hardware with me to test on (plus Chrome Dev Tools), Google's <a href="https://web.dev/measure/">web.dev</a> measuring tool seems pretty happy with it:</p>
+<h2>The Core Principle: Performance</h2>
+<p>I am a bit of a software speed freak, as I'm sure I'll write about separately in the future. Keeping my site <strong>as fast as possible on as many devices as possible</strong> was my central guiding principle.</p>
+<p>My site doesn't need to do a whole lot to begin with. In particular, images are the only thing that might realistically have a significant bandwidth impact, so I've spent a fair bit of time making sure every image on the site is either:</p>
+<ul>
+<li>a vector (SVG) graphic</li>
+<li>available in a variety of sizes and efficient, modern formats (like Google's WebP)</li>
+</ul>
+<p>Of course, I can't claim to be an authority on making the web fast, and there is absolutely more I can do. But I think I'm content with it as-is for now. Though I only have a small set of hardware with me to test on (plus Chrome Dev Tools), Google's <a href="https://web.dev/measure/">web.dev</a> measuring tool seems to like it:</p>
 <div class="card-local-media">
 <picture>
     <source type="image/webp" srcset="/content/responsive/185c46d8-300.webp 300w, /content/responsive/185c46d8-600.webp 600w, /content/responsive/185c46d8-900.webp 900w, /content/responsive/185c46d8.webp 1017w" sizes="70vw">
@@ -90,17 +96,17 @@
 </div>
 <p>That's a good (and very satisfying) sign.</p>
 <h2>Design</h2>
-<p>I knew I wanted to utilize Google's <a href="https://material.io/">Material</a> design language from more or less the beginning. I've been a huge fan of it ever since it came out way back in 2014.</p>
-<p>Of course, converting that desire into code proved challenging at first. Initially, there were no official libraries available -- only a smattering of third-party offerings. Fortunately, the official offering came in the form of Google's <a href="https://material.io/develop/web/">Material Components for the Web</a>, which I now use exclusively. It's got its quirks, but I'm pretty happy with the results I've gotten out of it.</p>
+<p>From the very beginning, I knew I wanted to utilize Google's <a href="https://material.io/">Material</a> design language. I've been a huge fan of it ever since it came out way back in 2014.</p>
+<p>Of course, converting that desire into code proved challenging at first. Initially, there were no official libraries available -- only a smattering of third-party offerings, none of which really covered every possible need. Fortunately, the official offering came in the form of Google's <a href="https://material.io/develop/web/">Material Components for the Web</a>, which I now use exclusively. It's got its quirks, but I'm pretty happy with the results I've gotten out of it.</p>
 <h2>Backend (rather, a lack of it)</h2>
 <p>Under the hood, this site is being hosted statically on Github Pages; I don't maintain a backend, and I shouldn't have to for something as simple as this.</p>
 <p>I <em>do</em> use a static site generator -- specifically, <a href="https://www.11ty.dev/">Eleventy</a> -- to make the magic happen. (I briefly played with Jekyll, Github Pages' built-in option, but it didn't quite meet my needs.)</p>
-<p>Most of all, Eleventy stood out to me for its simplicity while still offering access to the robust Node.JS ecosystem (a requirement for MDC Web). Where other Node offerings seemed monolithic and intimidating, Eleventy was quick to set up and use, and I kind of just ran with it. I'm still pretty darn pleased with it.</p>
+<p>Most of all, Eleventy stood out to me for its simplicity while still offering access to the robust Node.JS ecosystem (a requirement for MDC Web). Where other Node offerings seemed monolithic and intimidating, Eleventy was quick to set up and use, and I kind of just ran with it. I'm still pretty darn pleased.</p>
 <h2>Okay, so... what about the blog itself?</h2>
 <p>I've got some ideas lined up. I think an awful lot about technology and how we use it, and I've lacked an outlet to express those thoughts. If nothing else, I suspect my blog will become a dumping ground for them. Expect ramblings on everything from internet privacy to dark mode.</p>
 <p>Apart from that, I'm a gadget nerd, and I've always wanted to write reviews of my own devices. Obviously, I'll only be able to cover the devices I actually own, so I'll probably focus on why it was the right choice for <em>me</em> and my specific use case. Perhaps that will be interesting to some like-minded folk.</p>
-<p>It's also quite likely I'll have a few posts about what I'm working on at the moment, if I think it's particularly interesting and worth sharing.</p>
-<p>That's all I have for now. Thanks for reading!</p>
+<p>It's also quite likely I'll have a few posts about what I'm working on professionally at the moment, if I think it's particularly interesting and worth sharing in long-form. Likewise for personal life updates.</p>
+<p>That's all I have for now. Thanks for reading, and stay tuned! I'll probably propagate new articles via my <a href="https://twitter.com/MBestavros">Twitter</a> feed, so that's probably the best place to follow me.</p>
 <script>
             document.getElementById("article-title").textContent="Hello, world!";
             document.getElementById("article-subtitle").textContent="Obligatory.";

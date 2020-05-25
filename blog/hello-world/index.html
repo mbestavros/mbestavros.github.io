@@ -61,76 +61,71 @@
                     <div class="mdc-layout-grid__inner">
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
-                            
-<div class="home">
-    <h1 class="mdc-typography mdc-typography--headline2">About Me</h1>
-    <div class="mdc-layout-grid__inner about-landing-cards">
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-            <div class="mdc-card card">
-                <div class="mdc-card__primary-action" onclick="window.location.href='/about/professional/'">
-                    <div class="mdc-card__media card-local-media card-padded-media" style="background-color: white;">
-                        <picture>
-    <source type="image/webp" srcset="/content/responsive/44916739-300.webp 300w, /content/responsive/44916739-600.webp 600w, /content/responsive/44916739.webp 776w" sizes="70vw">
-  <source type="image/jpeg" srcset="/content/responsive/44916739-300.jpeg 300w, /content/responsive/44916739-600.jpeg 600w, /content/responsive/44916739.jpeg 776w" sizes="70vw">
-        <img
-        alt=""
-        src="/content/responsive/44916739-300.jpeg"
-        width="300"
-        height="193">
-        </picture>
-                    </div>
-                    <div class="card--primary">
-                        <h2 class="card--title mdc-typography mdc-typography--headline4">Professional</h2>
-                        <h3 class="about-card__subtitle mdc-typography mdc-typography--body1">I'm currently working at
-                            Red Hat. I'm interested in security and privacy, and how it can scale to the cloud. I
-                            graduated from Boston University in 2019 with a combined BA/MS in Computer Science.</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6-desktop">
-            <div class="mdc-card card">
-                <div class="mdc-card__primary-action" onclick="window.location.href='/about/personal/'">
-                    <div class="mdc-card__media card-local-media--16-9">
-                        <picture>
-    <source type="image/webp" srcset="/content/responsive/1375aa3d-300.webp 300w, /content/responsive/1375aa3d-600.webp 600w, /content/responsive/1375aa3d-900.webp 900w, /content/responsive/1375aa3d-1200.webp 1200w, /content/responsive/1375aa3d-1500.webp 1500w, /content/responsive/1375aa3d-1800.webp 1800w, /content/responsive/1375aa3d-2100.webp 2100w" sizes="70vw">
-  <source type="image/jpeg" srcset="/content/responsive/1375aa3d-300.jpeg 300w, /content/responsive/1375aa3d-600.jpeg 600w, /content/responsive/1375aa3d-900.jpeg 900w, /content/responsive/1375aa3d-1200.jpeg 1200w, /content/responsive/1375aa3d-1500.jpeg 1500w, /content/responsive/1375aa3d-1800.jpeg 1800w, /content/responsive/1375aa3d-2100.jpeg 2100w" sizes="70vw">
-        <img
-        alt=""
-        src="/content/responsive/1375aa3d-300.jpeg"
-        width="300"
-        height="225">
-        </picture>
-                    </div>
-                    <div class="card--primary">
-                        <h2 class="card--title mdc-typography mdc-typography--headline4">Personal</h2>
-                        <h3 class="about-card__subtitle mdc-typography mdc-typography--body1">I play the trombone. I'm a
-                            gamer. I love talking tech. I'm a big Trekkie. I like trains.</h3>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <div class="mdc-card card">
+    <div class="post-title mdc-typography" id="article-titles">
+        <h1 class="article-title mdc-typography--headline3" id="article-title"></h1>
+        <h3 class="article-subtitle mdc-typography--headline6" id="article-subtitle"></h3>
     </div>
-
-
-    <footer>
-        <div class="fabs">
-            <button class="fab mdc-fab mdc-fab--extended" aria-label="Resume" id="about-resume-button"
-                onclick="window.location.href='https://github.com/mbestavros'">
-                <div class="mdc-fab__ripple"></div>
-                <span class="mdc-fab__icon material-icons">description</span>
-                <span class="mdc-fab__label">Resume</span>
-            </button>
-        </div>
-    </footer>
+    <div class="post-content mdc-typography mdc-typography--body1">
+        <h1>I (finally) have a blog!</h1>
+<p>It's been a long time coming.</p>
+<p>I've been interested in setting up a portfolio site, if not a full blog, for about two years at this point -- ever since my senior spring in 2018. A personal website almost seems a rite of passage for computer science types; all my classmates and colleagues seemed to have them! And yet, even by my senior year, I hadn't managed to build one for myself.</p>
+<p>So I did! I attended a hackathon (funnily enough, held inside Red Hat's beautiful Boston office, where I now work) and put together a prototype in about a day or so. It wasn't a bad start at all.</p>
+<p>Of course, like many hackathon projects, I ended up leaving the site alone for a while, and ultimately didn't end up polishing or releasing it. But having that exercise in the back of my mind got me thinking: <em>what if I did it properly?</em> At that point, I wasn't super experienced with web development, so I knew I could probably do better if I tried -- and I'd probably learn along the way.</p>
+<p>I stopped and started a few times, but eventually, I did enough research and learning to feel confident in committing to the foundations of what would eventually become this: my very own personal website!</p>
+<p>Let's talk a bit about it.</p>
+<h2>Principles</h2>
+<p>I'm a minimalist: I don't like software that does more than it needs to. I also value performance: things should be snappy and fast.</p>
+<p>It's my hope that my site should run <strong>as natively as possible on as many devices as possible</strong>. Though I only have a small set of hardware with me to test on (plus Chrome Dev Tools), Google's <a href="https://web.dev/measure/">web.dev</a> measuring tool seems pretty happy with it:</p>
+<div class="card-local-media">
+<picture>
+    <source type="image/webp" srcset="/content/responsive/185c46d8-300.webp 300w, /content/responsive/185c46d8-600.webp 600w, /content/responsive/185c46d8-900.webp 900w, /content/responsive/185c46d8.webp 1017w" sizes="70vw">
+  <source type="image/jpeg" srcset="/content/responsive/185c46d8-300.jpeg 300w, /content/responsive/185c46d8-600.jpeg 600w, /content/responsive/185c46d8-900.jpeg 900w, /content/responsive/185c46d8.jpeg 1017w" sizes="70vw">
+        <img
+        alt=""
+        src="/content/responsive/185c46d8-300.jpeg"
+        width="300"
+        height="169">
+        </picture>
 </div>
+<p>That's a good (and very satisfying) sign.</p>
+<h2>Design</h2>
+<p>I knew I wanted to utilize Google's <a href="https://material.io/">Material</a> design language from more or less the beginning. I've been a huge fan of it ever since it came out way back in 2014.</p>
+<p>Of course, converting that desire into code proved challenging at first. Initially, there were no official libraries available -- only a smattering of third-party offerings. Fortunately, the official offering came in the form of Google's <a href="https://material.io/develop/web/">Material Components for the Web</a>, which I now use exclusively. It's got its quirks, but I'm pretty happy with the results I've gotten out of it.</p>
+<h2>Backend (rather, a lack of it)</h2>
+<p>Under the hood, this site is being hosted statically on Github Pages; I don't maintain a backend, and I shouldn't have to for something as simple as this.</p>
+<p>I <em>do</em> use a static site generator -- specifically, <a href="https://www.11ty.dev/">Eleventy</a> -- to make the magic happen. (I briefly played with Jekyll, Github Pages' built-in option, but it didn't quite meet my needs.)</p>
+<p>Most of all, Eleventy stood out to me for its simplicity while still offering access to the robust Node.JS ecosystem (a requirement for MDC Web). Where other Node offerings seemed monolithic and intimidating, Eleventy was quick to set up and use, and I kind of just ran with it. I'm still pretty darn pleased with it.</p>
+<h2>Okay, so... what about the blog itself?</h2>
+<p>I've got some ideas lined up. I think an awful lot about technology and how we use it, and I've lacked an outlet to express those thoughts. If nothing else, I suspect my blog will become a dumping ground for them. Expect ramblings on everything from internet privacy to dark mode.</p>
+<p>Apart from that, I'm a gadget nerd, and I've always wanted to write reviews of my own devices. Obviously, I'll only be able to cover the devices I actually own, so I'll probably focus on why it was the right choice for <em>me</em> and my specific use case. Perhaps that will be interesting to some like-minded folk.</p>
+<p>It's also quite likely I'll have a few posts about what I'm working on at the moment, if I think it's particularly interesting and worth sharing.</p>
+<p>That's all I have for now. Thanks for reading!</p>
 <script>
-            document.title = "About - Mark Bestavros";
+            document.getElementById("article-title").textContent="Hello, world!";
+            document.getElementById("article-subtitle").textContent="Obligatory.";
+            document.getElementById("article-titles").insertAdjacentHTML('afterend', `<div class="mdc-card__media card-local-media--16-9">
+                <picture>
+    <source type="image/webp" srcset="/content/responsive/ade9bd04-300.webp 300w, /content/responsive/ade9bd04-600.webp 600w, /content/responsive/ade9bd04-900.webp 900w, /content/responsive/ade9bd04-1200.webp 1200w, /content/responsive/ade9bd04-1500.webp 1500w, /content/responsive/ade9bd04-1800.webp 1800w, /content/responsive/ade9bd04-2100.webp 2100w" sizes="70vw">
+  <source type="image/jpeg" srcset="/content/responsive/ade9bd04-300.jpeg 300w, /content/responsive/ade9bd04-600.jpeg 600w, /content/responsive/ade9bd04-900.jpeg 900w, /content/responsive/ade9bd04-1200.jpeg 1200w, /content/responsive/ade9bd04-1500.jpeg 1500w, /content/responsive/ade9bd04-1800.jpeg 1800w, /content/responsive/ade9bd04-2100.jpeg 2100w" sizes="70vw">
+        <img
+        alt=""
+        src="/content/responsive/ade9bd04-300.jpeg"
+        width="300"
+        height="200">
+        </picture>
+            </div>`);
+        </script>
+<script>
+            document.title = "Hello, world!";
             var meta = document.createElement('meta');
             meta.name = "description";
-            meta.content = "Learn a little more about me.";
+            meta.content = "Obligatory.";
             document.getElementsByTagName('head')[0].appendChild(meta);
         </script>
+
+    </div>
+</div>
 
                         </div>
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>

@@ -1,22 +1,18 @@
 --- 
 layout: layouts/post
 title: Hello, world!
-subtitle: Obligatory.
+subtitle: A quick look into how I built this site.
 header-image: https://images.unsplash.com/photo-1451187580459-43490279c0fa
 --- 
 # I (finally) have a blog!
 
 It's been a long time coming.
 
-I've been interested in setting up a portfolio site, if not a full blog, for about two years at this point -- ever since my senior spring in 2018. A personal website almost seems a rite of passage for computer science types; all my classmates and colleagues seemed to have them! And yet, even by my senior year, I hadn't managed to build one for myself.
+A personal website almost seems a rite of passage for computer science types; all my classmates and colleagues seem to have them. And yet, somehow, I'd never gotten around to building one for myself.
 
-So I did! I attended a hackathon (funnily enough, held inside Red Hat's beautiful Boston office, where I now work) and put together a prototype in about a day or so. It wasn't a bad start at all.
+That doesn't mean I hadn't been thinking about it. For over a year now, I've stopped and started researching and experimenting with various web dev tools in my spare time, and eventually began to flesh out the foundation of this personal portfolio site.
 
-Of course, like many hackathon projects, I ended up leaving the site alone for a while, and ultimately didn't end up polishing or releasing it. But having that exercise in the back of my mind got me thinking: _what if I did it properly?_ I wasn't super experienced with web development at that point, so I knew I could probably do better if I tried -- and I'd probably learn along the way.
-
-I stopped and started a few times, but eventually, I did enough research and learning to feel confident in committing to the foundations of what would eventually become this: my very own personal website!
-
-I kept making small progress on it over the course of a year -- right up until COVID-19 hit. I figured I'd make the best of all the time I'd gotten back from not commuting to just push this across the finish line. And here we are!
+I kept making small progress right up until COVID-19 hit. I figured I'd make the best of all the time I'd gotten back from not commuting to just push this across the finish line. And here we are!
 
 Let's talk a bit about it.
 

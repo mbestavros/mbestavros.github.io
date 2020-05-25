@@ -6,7 +6,7 @@
   $surface: #212121,
   $background: #121212,
   $on-primary: #ffffff,
-  $on-secondary: #ffffff,
+  $on-secondary: #000000,
   $on-surface: #ffffff,
 );
 
@@ -209,4 +209,35 @@ body {
 .post-image {
   max-width: 100%;
   height: auto;
+}
+
+// Styles for plain links (most commonly used in articles)
+a:link {
+  color: #b6b7ff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: #8187ff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #ff7043;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: #ffa270;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+// Make body text larger and more readable
+.mdc-typography--body1 {
+  font-size: large;
+  line-height: 1.5;
 }

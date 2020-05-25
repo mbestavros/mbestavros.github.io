@@ -2,8 +2,6 @@
 
 The repository for my personal Github Pages-hosted website. Uses Google's [Material Design Components for the Web](https://github.com/material-components/material-components-web) on top of [Eleventy](https://github.com/11ty/eleventy/).
 
-The site is very much a work-in-progress, and is constantly being changed and tweaked. I hope to use it as a playground to learn the basics of web dev.
-
 ## Running the site
 
 This site is built on Node.JS; you will need that installed and working first.
@@ -18,10 +16,11 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 - @TartanLlama's [Github Action](https://github.com/TartanLlama/actions-eleventy/) for deploying Eleventy to Github Pages
 - [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively
 - [Webpack](https://webpack.js.org/) for bundling and compiling SCSS/JS
+- [Unsplash](https://unsplash.com/) for some of the lovely imagery
 
 ## License
 
-The majority of this project is licensed under Apache 2.0.
+The majority of this project is licensed under Apache 2.0, as detailed in `LICENSE`.
 
 The exception is all content in the `content` directory, which includes either:
 

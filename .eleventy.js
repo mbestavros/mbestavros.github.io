@@ -69,15 +69,20 @@ module.exports = function (eleventyConfig) {
 
 
 // Function to generate and markup responsive images.
+// Each invocation of this function can take about a second per call, so it
+// _will_ slow down the build. Set `runWithoutWimages` to true to make things
+// faster (but without images).
 async function responsiveImages(src, alt) {
-    if (!src) {
+    let runWithoutImages = false;
+    if (!src || runWithoutImages) {
         return "";
     }
+    console.log("Converting " + src);
 
     options = {
         // Array of widths
         // Optional: use falsy value to fall back to native image size
-        widths: [150, 300, 450, 600, 750, 900, 1050, 1200, 1350, 1500, 1650, 1800, 1950],
+        widths: [300, 600, 900, 1200, 1500, 1800, 2100],
 
         // Pass any format supported by sharp
         formats: ["webp", "jpeg"], //"png"

@@ -16,7 +16,9 @@ And some more text! Yay!
 
 ### And an image!
 
-<img class="post-image" src = 'https://66.media.tumblr.com/d9a3ce2eb39c98d1f81dfc8b5ad266f8/tumblr_mv4uuywedA1rw4rkuo4_r2_400.gif'>
+<div class="card-local-media">
+{% responsiveImage, "content/personal/web-dev-speed-test.png", "" %}
+</div>
 
 The below shortcodes are necessary for properly filling out metadata and titles.
 

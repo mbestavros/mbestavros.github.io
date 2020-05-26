@@ -47,6 +47,10 @@ I _do_ use a static site generator -- specifically, [Eleventy](https://www.11ty.
 
 Most of all, Eleventy stood out to me for its simplicity while still offering access to the robust Node.JS ecosystem (a requirement for MDC Web). Where other Node offerings seemed monolithic and intimidating, Eleventy was quick to set up and use, and I kind of just ran with it. I'm still pretty darn pleased.
 
+## Show me the code!
+
+It's all on my [Github!](https://github.com/mbestavros/mbestavros.github.io)
+
 ## Okay, so... what about the blog itself?
 
 I've got some ideas lined up. I think an awful lot about technology and how we use it, and I've lacked an outlet to express those thoughts. If nothing else, I suspect my blog will become a dumping ground for them. Expect ramblings on everything from internet privacy to dark mode.

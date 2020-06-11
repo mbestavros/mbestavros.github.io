@@ -1,8 +1,11 @@
 --- 
 layout: layouts/post
 title: Hello, world!
-subtitle: A quick look into how I built this site.
+subtitle: A quick look into how I built my website.
 header-image: https://images.unsplash.com/photo-1451187580459-43490279c0fa
+tags:
+    - tech
+    - development
 --- 
 # I (finally) have a blog!
 

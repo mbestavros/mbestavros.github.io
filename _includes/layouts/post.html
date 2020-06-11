@@ -12,4 +12,24 @@ layout: layouts/default
     <div class="post-content mdc-typography mdc-typography--body1">
         {{ content | safe }}
     </div>
+    {% if tags.size > 1 %}
+        <div class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+                <div class="mdc-chip-set" role="grid">
+                    {% for tag in tags %}
+                    {% if tag != "blog" %}
+                    <div class="mdc-chip" role="row" onclick="window.location.href='/blog/tags/{{ tag }}'">
+                        <div class="mdc-chip__ripple"></div>
+                        <span role="gridcell">
+                            <span role="button" tabindex="0" class="mdc-chip__primary-action">
+                                <span class="mdc-chip__text">{{ tag }}</span>
+                            </span>
+                        </span>
+                    </div>
+                    {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    {% endif %}
 </div>

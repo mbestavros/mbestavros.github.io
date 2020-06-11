@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Posts - Mark's Blog</title>
-    <meta name="Description" content="A few of my thoughts.">
+    <title>Mark's Blog</title>
+    <meta name="Description" content="Topical thoughts.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style>
@@ -62,7 +62,7 @@
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
                             
-<h1 class="mdc-typography mdc-typography--headline2">My Thoughts</h1>
+<h1 class="mdc-typography mdc-typography--headline2">Posts tagged "development"</h1>
 
 
 
@@ -70,6 +70,8 @@
 
 
 
+
+            
 
             
 
@@ -145,6 +147,11 @@
 
 <footer>
   <div class="fabs">
+    <button class="mdc-fab mdc-fab--extended fab" aria-label="Favorite" onclick="window.location.href='/blog/'">
+      <div class="mdc-fab__ripple"></div>
+      <span class="mdc-fab__icon material-icons">library_books</span>
+      <span class="mdc-fab__label">Main Blog</span>
+    </button>
     <button class="mdc-fab mdc-fab--extended fab" aria-label="Favorite" onclick="window.location.href='/blog/tags/'">
       <div class="mdc-fab__ripple"></div>
       <span class="mdc-fab__icon material-icons">label</span>
@@ -153,11 +160,12 @@
   </div>
 </footer>
 
+
 <script>
-            document.title = "Page 0 - Mark's Blog";
+            document.title = "development, page 0 - Mark's Blog";
             var meta = document.createElement('meta');
             meta.name = "description";
-            meta.content = "A few of my thoughts.";
+            meta.content = "Everything I've written about development";
             document.getElementsByTagName('head')[0].appendChild(meta);
         </script>
 

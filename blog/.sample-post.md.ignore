@@ -19,8 +19,3 @@ And some more text! Yay!
 <div class="card-local-media">
 {% responsiveImage, "content/personal/web-dev-speed-test.png", "" %}
 </div>
-
-The below shortcodes are necessary for properly filling out metadata and titles.
-
-{% articleSetHeaders, title, subtitle, header-image %}
-{% pageMetadata, title, subtitle %}

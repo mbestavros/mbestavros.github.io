@@ -60,5 +60,3 @@ Apart from that, I'm a gadget nerd, and I've always wanted to write reviews of m
 It's also quite likely I'll have a few posts about what I'm working on professionally at the moment, if I think it's particularly interesting and worth sharing in long-form. Likewise for personal life updates.
 
 That's all I have for now. Thanks for reading, and stay tuned! I'll probably propagate new articles via my [Twitter](https://twitter.com/MBestavros) feed, so that's probably the best place to follow me.
-{% articleSetHeaders, title, subtitle, header-image %}
-{% pageMetadata, title, subtitle %}

@@ -9,7 +9,7 @@ module.exports = function (eleventyConfig) {
         return await responsiveImages(src, alt);
     });
 
-    // Shortcode for adding title and description dynamically via JS
+    // Shortcode for editing title and description dynamically via JS
     eleventyConfig.addShortcode("pageMetadata", async function (title, description) {
         return `<script>
             document.title = "${title}";
@@ -17,17 +17,6 @@ module.exports = function (eleventyConfig) {
             meta.name = "description";
             meta.content = "${description}";
             document.getElementsByTagName('head')[0].appendChild(meta);
-        </script>`;
-    });
-
-    // Shortcode for retroactively inserting article info
-    eleventyConfig.addShortcode("articleSetHeaders", async function (title, subtitle, header) {
-        return `<script>
-            document.getElementById("article-title").textContent="${title}";
-            document.getElementById("article-subtitle").textContent="${subtitle}";
-            document.getElementById("article-titles").insertAdjacentHTML('afterend', \`<div class="mdc-card__media card-local-media--16-9">
-                ${await responsiveImages(header, "")}
-            </div>\`);
         </script>`;
     });
 

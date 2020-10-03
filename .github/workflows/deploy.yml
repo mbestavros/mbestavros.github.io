@@ -1,17 +1,17 @@
 # Deployment action from https://github.com/TartanLlama/actions-eleventy/
 
-name: Eleventy Build/Deploy
+name: Deploy Production Site
 on:
-    push:
-        branches:
-            - source  # default branch; needed to make user GH pages work
+  push:
+    branches:
+      - source  # default branch; needed to make user GH pages work
 
 jobs:
   build_deploy:
     runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-      - name: Build
+      - name: Eleventy Build
         uses: TartanLlama/actions-eleventy@v1.2
         with:
             install_dependencies: true

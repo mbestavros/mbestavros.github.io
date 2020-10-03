@@ -1,0 +1,14 @@
+# Deployment action from https://github.com/TartanLlama/actions-eleventy/
+
+name: Test Eleventy site build
+on: pull_request
+
+jobs:
+  build:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@master
+      - name: Eleventy Build
+        uses: TartanLlama/actions-eleventy@v1.2
+        with:
+            install_dependencies: true

@@ -1,6 +1,6 @@
 # Deployment action from https://github.com/TartanLlama/actions-eleventy/
 
-name: Deploy Production Site
+name: deploy
 on:
   push:
     branches:

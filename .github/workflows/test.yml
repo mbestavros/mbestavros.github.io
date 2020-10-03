@@ -1,6 +1,6 @@
 # Deployment action from https://github.com/TartanLlama/actions-eleventy/
 
-name: Test Eleventy site build
+name: test
 on: pull_request
 
 jobs:

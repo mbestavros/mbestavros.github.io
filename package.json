@@ -28,7 +28,7 @@
     "@material/ripple": "^5.1.0",
     "@material/tab-bar": "^5.1.0",
     "@material/top-app-bar": "^5.1.0",
-    "@material/typography": "^5.1.0",
+    "@material/typography": "^7.0.0",
     "autoprefixer": "^9.8.6",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.1.0",

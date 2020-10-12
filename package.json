@@ -40,7 +40,7 @@
     "material-components-web": "^7.0.0",
     "postcss-loader": "^4.0.4",
     "sass": "^1.26.11",
-    "sass-loader": "^10.0.2",
+    "sass-loader": "^10.0.3",
     "webpack": "^4.44.2",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0"

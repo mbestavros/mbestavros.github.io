@@ -21,7 +21,7 @@
     "@11ty/eleventy-img": "^0.3.0",
     "@babel/core": "^7.12.3",
     "@babel/preset-env": "^7.12.1",
-    "@material/button": "^7.0.0",
+    "@material/button": "^8.0.0",
     "@material/card": "^8.0.0",
     "@material/icon-button": "^7.0.0",
     "@material/layout-grid": "^8.0.0",

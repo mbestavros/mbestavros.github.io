@@ -24,7 +24,7 @@
     "@material/button": "^7.0.0",
     "@material/card": "^7.0.0",
     "@material/icon-button": "^7.0.0",
-    "@material/layout-grid": "^7.0.0",
+    "@material/layout-grid": "^8.0.0",
     "@material/ripple": "^7.0.0",
     "@material/tab-bar": "^7.0.0",
     "@material/top-app-bar": "^7.0.0",

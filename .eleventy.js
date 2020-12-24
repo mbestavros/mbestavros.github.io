@@ -59,7 +59,7 @@ module.exports = function (eleventyConfig) {
 
 // Function to generate and markup responsive images.
 // Each invocation of this function can take about a second per call, so it
-// _will_ slow down the build. Set `runWithoutWimages` to true to make things
+// _will_ slow down the build. Set `runWithoutImages` to true to make things
 // faster (but without images).
 async function responsiveImages(src, alt) {
     let runWithoutImages = false;

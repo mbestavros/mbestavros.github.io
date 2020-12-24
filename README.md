@@ -13,7 +13,6 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 ## Credits
 
 - [Eleventy](https://github.com/11ty/eleventy/) for a fantastic static site generator
-- @TartanLlama's [Github Action](https://github.com/TartanLlama/actions-eleventy/) for deploying Eleventy to Github Pages
 - [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively
 - [Webpack](https://webpack.js.org/) for bundling and compiling SCSS/JS
 - [Unsplash](https://unsplash.com/) for some of the lovely imagery

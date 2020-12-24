@@ -4,7 +4,8 @@
   "description": "Mark Bestavros' personal site.",
   "main": ".eleventy.js",
   "scripts": {
-    "start": "webpack & eleventy --serve"
+    "start": "webpack --watch & eleventy --serve",
+    "build": "webpack && eleventy"
   },
   "repository": {
     "type": "git",

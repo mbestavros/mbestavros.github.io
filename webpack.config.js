@@ -9,7 +9,7 @@ module.exports = {
     filename: 'bundle.js',
     publicPath: '',
   },
-  watch: true,
+  watch: (process.argv.indexOf('--watch') > -1),
   module: {
     rules: [
       {

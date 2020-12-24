@@ -17,6 +17,7 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 - [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively
 - [Webpack](https://webpack.js.org/) for bundling and compiling SCSS/JS
 - [Unsplash](https://unsplash.com/) for some of the lovely imagery
+- [GoatCounter](https://www.goatcounter.com/) for basic privacy-preserving analytics
 
 ## License
 

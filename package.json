@@ -27,7 +27,7 @@
     "@material/icon-button": "^8.0.0",
     "@material/layout-grid": "^9.0.0",
     "@material/ripple": "^8.0.0",
-    "@material/tab-bar": "^8.0.0",
+    "@material/tab-bar": "^9.0.0",
     "@material/top-app-bar": "^8.0.0",
     "@material/typography": "^9.0.0",
     "autoprefixer": "^10.2.1",

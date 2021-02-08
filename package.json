@@ -29,7 +29,7 @@
     "@material/ripple": "^9.0.0",
     "@material/tab-bar": "^9.0.0",
     "@material/top-app-bar": "^9.0.0",
-    "@material/typography": "^9.0.0",
+    "@material/typography": "^10.0.0",
     "autoprefixer": "^10.2.4",
     "babel-core": "^6.26.3",
     "babel-loader": "^8.2.2",

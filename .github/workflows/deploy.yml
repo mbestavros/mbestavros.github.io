@@ -2,6 +2,7 @@
 
 name: deploy
 on:
+  workflow_dispatch:
   push:
     branches:
       - source  # default branch; needed to make user GH pages work

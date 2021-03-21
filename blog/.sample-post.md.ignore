@@ -2,6 +2,7 @@
 layout: layouts/post
 title: An example post
 subtitle: A starter template for blog posts.
+date: Last Modified
 header-image: content/personal/profile_fall_2019.JPG
 tags:
     - tech

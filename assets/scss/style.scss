@@ -97,8 +97,33 @@ body {
 .card-local-media img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  margin: auto;
+  display: block;
+  object-fit: contain;
 }
+
+.card-local-media-half {
+}
+
+.card-local-media-half img {
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.card-local-media-quarter {
+}
+
+.card-local-media-quarter img {
+  width: 25%;
+  height: 25%;
+  margin: auto;
+  display: block;
+  object-fit: contain;
+}
+
 
 .card-local-media--16-9,
 .card-local-media--square {

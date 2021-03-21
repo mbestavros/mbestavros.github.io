@@ -2,7 +2,8 @@
 layout: layouts/post
 title: Hello, world!
 subtitle: A quick look into how I built my website.
-header-image: https://images.unsplash.com/photo-1451187580459-43490279c0fa
+date: 2020-09-30
+header-image: https://unsplash.com/photos/Q1p7bh3SHj8/download?force=true
 tags:
     - tech
     - development

@@ -18,13 +18,13 @@ try {
 } catch(e) {}
 
 // Add ripples to things
-const rippleSelector = '.mdc-card__action--button, .mdc-card__primary-action, .mdc-fab, .mdc-button';
+const rippleSelector = '.mdc-card__action--button, .mdc-card__primary-action, .mdc-fab, .mdc-button, .mdc-evolution-chip';
 const ripples = [].map.call(document.querySelectorAll(rippleSelector), function(el) {
   return new MDCRipple(el);
 });
 
 // Initialize post chip sets
-const chipSetSelector = '.mdc-chip-set';
+const chipSetSelector = '.mdc-evolution-chip-set';
 const chipSets = [].map.call(document.querySelectorAll(chipSetSelector), function(el) {
   return new MDCChipSet(el);
 });

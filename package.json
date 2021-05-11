@@ -41,7 +41,7 @@
     "material-components-web": "^10.0.0",
     "postcss-loader": "^5.2.0",
     "sass": "^1.32.10",
-    "sass-loader": "^11.0.1",
+    "sass-loader": "^11.1.0",
     "webpack": "^5.36.2",
     "webpack-cli": "^4.6.0",
     "webpack-dev-server": "^3.11.2"

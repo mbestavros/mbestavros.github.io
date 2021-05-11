@@ -24,7 +24,7 @@
     "@babel/preset-env": "^7.13.15",
     "@material/button": "^10.0.0",
     "@material/card": "^10.0.0",
-    "@material/icon-button": "^10.0.0",
+    "@material/icon-button": "^11.0.0",
     "@material/layout-grid": "^11.0.0",
     "@material/ripple": "^10.0.0",
     "@material/tab-bar": "^10.0.0",

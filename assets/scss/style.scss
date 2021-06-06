@@ -46,16 +46,7 @@ body {
   height: 100%;
 }
 
-// Reset List Styles
-.navList {
-  list-style: none;
-  height: 32px;
-  padding-left: 0;
-}
-
-// Style the list items side by side
-.navListItem {
-  display: inline-block;
+.navListLink {
   margin: 0 8px;
 }
 

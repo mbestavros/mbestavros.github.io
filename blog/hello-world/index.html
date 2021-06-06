@@ -25,7 +25,7 @@
 
 <body class="mdc-typography">
     <div class="app-content">
-        <header class="mdc-top-app-bar app-bar drawer-top-app-bar" id="app-bar">
+        <header class="mdc-top-app-bar app-bar mdc-top-app-bar--fixed" id="app-bar">
   <div class="mdc-top-app-bar__row">
     <section class="mdc-top-app-bar__section mdc-top-app-bar__section--align-start">
       <button class="material-icons mdc-top-app-bar__navigation-icon mdc-icon-button"
@@ -51,13 +51,12 @@
   </div>
 </header>
 
-        <main class="main-content" id="main-content" aria-label="Content">
-            <div class="mdc-top-app-bar--fixed-adjust">
-                <div class="mdc-layout-grid">
-                    <div class="mdc-layout-grid__inner">
-                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
-                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
-                            <div class="mdc-card card">
+        <main class="main-content mdc-top-app-bar--fixed-adjust" id="main-content" aria-label="Content">
+            <div class="mdc-layout-grid">
+                <div class="mdc-layout-grid__inner">
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
+                        <div class="mdc-card card">
     <div class="post-title mdc-typography" id="article-titles">
         <h1 class="article-title mdc-typography--headline3" id="article-title">Hello, world!</h1>
         <h3 class="article-subtitle mdc-typography--headline6" id="article-subtitle">A quick look into how I built my website.</h3>
@@ -153,9 +152,8 @@
     
 </div>
 
-                        </div>
-                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                     </div>
+                    <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                 </div>
             </div>
         </main>

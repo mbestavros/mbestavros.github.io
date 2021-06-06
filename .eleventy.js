@@ -62,7 +62,7 @@ module.exports = function (eleventyConfig) {
 // _will_ slow down the build. Set `runWithoutImages` to true to make things
 // faster (but without images).
 async function responsiveImages(src, alt) {
-    let runWithoutImages = true;
+    let runWithoutImages = false;
     if (!src || runWithoutImages) {
         return "";
     }

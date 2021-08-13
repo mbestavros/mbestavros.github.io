@@ -1,8 +1,8 @@
 // Import MDC components
-import {MDCTopAppBar} from '@material/top-app-bar/index';
-import {MDCRipple} from '@material/ripple/index';
-import {MDCTabBar} from '@material/tab-bar/index';
-import {MDCChipSet} from '@material/chips/deprecated/index';
+import {MDCTopAppBar} from '@material/top-app-bar';
+import {MDCRipple} from '@material/ripple';
+import {MDCTabBar} from '@material/tab-bar';
+import {MDCChipSet} from '@material/chips';
 
 // Instantiate elements
 const topAppBarElement = document.getElementById('app-bar');
@@ -18,7 +18,7 @@ try {
 } catch(e) {}
 
 // Add ripples to things
-const rippleSelector = '.mdc-card__primary-action, .mdc-fab, .mdc-button, .mdc-evolution-chip';
+const rippleSelector = '.mdc-card__primary-action, .mdc-icon-button, .mdc-button, .mdc-fab, .mdc-evolution-chip';
 const ripples = [].map.call(document.querySelectorAll(rippleSelector), function(el) {
   return new MDCRipple(el);
 });

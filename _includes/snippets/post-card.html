@@ -5,6 +5,7 @@ This is the design of each post card.
 <div class="mdc-layout-grid__cell">
     <div class="mdc-card">
         <div class="mdc-card__primary-action mdc-ripple-surface" onclick="window.location.href='{{ post.url }}'">
+            <div class="mdc-card__ripple"></div>
             {% if post.data.header-image %}
             <div class="mdc-card__media card-local-media--16-9">
                 {% responsiveImage, post.data.header-image, "" %}

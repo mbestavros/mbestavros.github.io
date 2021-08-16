@@ -35,17 +35,8 @@ body {
   overflow: auto;
 }
 
-.main-content {
-  //overflow: auto;
-  //height: 100%;
-}
-
 .navListLink {
   margin: 0 8px;
-}
-
-.app-bar {
-  //position: absolute;
 }
 
 // Hide top app bar title on mobile
@@ -62,10 +53,6 @@ body {
 }
 
 // General card styles
-.card {
-  overflow: hidden;
-}
-
 .card--title, .card--subtitle {
   text-align: center;
 }

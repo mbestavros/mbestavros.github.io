@@ -4,7 +4,7 @@ This is the design of each post card.
 
 <div class="mdc-layout-grid__cell">
     <div class="mdc-card">
-        <div class="mdc-card__primary-action mdc-ripple-surface" onclick="window.location.href='{{ post.url }}'">
+        <div class="mdc-card__primary-action" onclick="window.location.href='{{ post.url }}'">
             <div class="mdc-card__ripple"></div>
             {% if post.data.header-image %}
             <div class="mdc-card__media card-local-media--16-9">
@@ -29,7 +29,7 @@ This is the design of each post card.
                         <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/{{ tag }}'">
                             <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
                                 <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary mdc-ripple-surface"></span>
+                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
                                     <span class="mdc-evolution-chip__text-label">{{ tag }}</span>
                                 </button>
                             </span>

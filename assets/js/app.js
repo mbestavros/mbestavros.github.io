@@ -18,7 +18,7 @@ try {
 } catch(e) {}
 
 // Add ripples to things
-const rippleSelector = '.mdc-card__primary-action, .mdc-icon-button, .mdc-button, .mdc-fab, .mdc-evolution-chip';
+const rippleSelector = '.mdc-card__primary-action, .mdc-fab, .mdc-evolution-chip';
 const ripples = [].map.call(document.querySelectorAll(rippleSelector), function(el) {
   return new MDCRipple(el);
 });

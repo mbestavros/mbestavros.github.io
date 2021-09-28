@@ -28,7 +28,7 @@
     "@material/chips": "^12.0.0",
     "@material/icon-button": "^12.0.0",
     "@material/layout-grid": "^13.0.0",
-    "@material/ripple": "^12.0.0",
+    "@material/ripple": "^13.0.0",
     "@material/tab-bar": "^13.0.0",
     "@material/top-app-bar": "^12.0.0",
     "@material/typography": "^13.0.0",

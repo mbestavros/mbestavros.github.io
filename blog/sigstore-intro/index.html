@@ -4,8 +4,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Mark's Blog</title>
-    <meta name="Description" content="Topical thoughts.">
+    <title>Sigstore, in a nutshell</title>
+    <meta name="Description" content="Join me on a journey into the depths of supply chain security.">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
     <style>
@@ -68,42 +68,13 @@
             <div class="mdc-layout-grid__inner">
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 main-content-container">
-                    
-<h1 class="mdc-typography mdc-typography--headline2">Posts tagged "security"</h1>
-
-
-
-
-
-
-
-
-            
-
-            
-
-            
-
-            
-
-            
-
-            
-
-
-
-
-<div class="mdc-layout-grid__inner">
-  
-  
-
-<div class="mdc-layout-grid__cell">
-    <div class="mdc-card">
-        <div class="mdc-card__primary-action" onclick="window.location.href='/blog/sigstore-intro/'">
-            <div class="mdc-card__ripple"></div>
-            
-            <div class="mdc-card__media card-local-media--16-9">
-                <picture>
+                    <div class="mdc-card card">
+    <div class="post-title mdc-typography" id="article-titles">
+        <h1 class="article-title mdc-typography--headline3" id="article-title">Sigstore, in a nutshell</h1>
+        <h3 class="article-subtitle mdc-typography--headline6" id="article-subtitle">Join me on a journey into the depths of supply chain security.</h3>
+    </div>
+    <div class="mdc-card__media card-local-media--16-9">
+        <picture>
     <source type="image/webp" srcset="/content/responsive/f08669b6-300.webp 300w, /content/responsive/f08669b6-600.webp 600w, /content/responsive/f08669b6-900.webp 900w, /content/responsive/f08669b6-1200.webp 1200w, /content/responsive/f08669b6-1500.webp 1500w, /content/responsive/f08669b6-1800.webp 1800w, /content/responsive/f08669b6-2100.webp 2100w" sizes="70vw">
   <source type="image/jpeg" srcset="/content/responsive/f08669b6-300.jpeg 300w, /content/responsive/f08669b6-600.jpeg 600w, /content/responsive/f08669b6-900.jpeg 900w, /content/responsive/f08669b6-1200.jpeg 1200w, /content/responsive/f08669b6-1500.jpeg 1500w, /content/responsive/f08669b6-1800.jpeg 1800w, /content/responsive/f08669b6-2100.jpeg 2100w" sizes="70vw">
         <img
@@ -112,201 +83,113 @@
         width="300"
         height="190">
         </picture>
-            </div>
-            
-            <div class="card--primary">
-                <h2 class="card--title mdc-typography mdc-typography--headline5">Sigstore, in a nutshell
-                </h2>
-                <h3 class="card--subtitle mdc-typography mdc-typography--subtitle2">
-                    2021-09-29</h3>
-            </div>
-            <div class="card--secondary mdc-typography mdc-typography--body1">Join me on a journey into the depths of supply chain security.</div>
-        </div>
-        
+    </div>
+    <div class="post-content mdc-typography mdc-typography--body1">
+        <h1>I did it! I submitted my pull request!</h1>
+<p>What, no applause?</p>
+<p>Well, I guess a pull request on its own is nothing out of the ordinary. But <em>this one</em> is special - at least to me. It’s the culmination of a couple months of my work on the Sigstore project, and while the road to opening it was bumpier than Memorial Drive before it was re-paved this summer, I’ve learned a lot along the way.</p>
+<p>Gather round, grab a drink, and let’s talk about it!</p>
+<h2>Hold up… what the heck is Sigstore?</h2>
+<p>Aside from my professional life for most of 2021? Well, in the project’s <a href="https://www.sigstore.dev/">own words</a>:</p>
+<blockquote>
+<p>sigstore is a set of tools developers, software maintainers, package managers and security experts can benefit from. Bringing together free-to-use open source technologies like Fulcio, Cosign and Rekor, it handles digital signing, verification and checks for provenance needed to make it safer to distribute and use open source software.</p>
+</blockquote>
+<p>If that doesn’t mean anything to you, that’s fine! Let’s unpack it by first talking about the problem Sigstore is trying to solve.</p>
+<h3>Supply Chain Security, or: making sure your dependencies are authentic</h3>
+<p>(Note: I fell into my usual trap of over-explaining something that my intended audience probably already understands. If “developers need to make sure their dependencies are from where they say they’re from or bad things will happen” tells you everything, feel free to skip some or all of this section - if not, please read on!)</p>
+<h4>What’s a dependency?</h4>
+<p>It’s exceedingly rare for a modern piece of software to have a monolithic codebase (or, in other words, for all its code to have come from a single source); indeed, in a lot of cases, it’s very likely a lot of the code that gets shipped to end-users is, in some form or another, part of a <strong>dependency</strong>, or a piece of code that is maintained separately by a third party. In a lot of cases, these dependencies accomplish some common task that many different pieces of software need to function. A good example might be a video player - it would be wildly impractical for a developer to write one from scratch, so chances are they’ll look for someone else that’s done it already and include their work as part of their project (assuming they’re allowed to by whatever license the video player is published under).</p>
+<p>Dependencies are very useful! They allow developers to spend time focusing on novel, interesting parts of their software instead of having to deal with more foundational bits that have already been done hundreds of times before by others. Plus, if a dependency has a bug, it only has to be fixed once - and when projects update that dependency, the bug will be fixed for them too.</p>
+<h4>The dark side of dependencies</h4>
+<p>Dependencies can also be problematic. Because they tend to be maintained by third parties, the developer using them must have some degree of trust that those third parties will not do malicious things with the access they’re given (something I’ve talked about in much greater length <a href="https://mark.bestavros.net/blog/a-matter-of-trust-1/">here</a>). This may be a safe assumption to make most of the time, but what happens when it <em>isn’t</em>? What happens if a malicious dependency makes its way into a developer’s codebase?</p>
+<p>Bad things. <em>Really</em> bad things.</p>
+<p>In fact, that is exactly what a <strong>supply chain attack</strong> means: some adversary manages to sneak a malicious piece of code into an otherwise trusted piece of software and, in the process, gain unauthorized access to places that use that software.</p>
+<p>This is an increasingly pervasive attack vector: <a href="https://venturebeat.com/2021/09/15/next-gen-software-supply-chain-attacks-up-650-in-2021/">research</a> suggests that there’s been a staggering <em>650%</em> increase in this kind of hack in 2021 alone. And the targets are big: remember the <a href="https://www.npr.org/2021/04/16/985439655/a-worst-nightmare-cyberattack-the-untold-story-of-the-solarwinds-hack">SolarWinds</a> hack, the one that managed to breach a significant portion of the US government’s IT infrastructure? That was a supply chain attack - probably the most devastating example to date.</p>
+<p>In short, supply chain attacks are a <em>very</em> real problem, and the stakes for preventing them are high.</p>
+<h3>The solution: software signing</h3>
+<p>The good news? It’s a solved problem. <a href="https://en.wikipedia.org/wiki/Code_signing"><strong>Code signing</strong></a>, in short, is the act of using cryptographic mechanisms like signatures and certificates to verify that a piece of software was authored by a particular party, and that it hasn’t changed since the author verified their ownership of it. This is a powerful tool - one that, if (theoretically) enforced for all dependencies in the software supply chain, would effectively deny any opportunity for a supply chain attack to happen in the first place. Which is great!</p>
+<h4>So... why isn’t it used everywhere?</h4>
+<p>In short: because it’s <em>hard</em>. Code signing is built on the same tools used for signatures and certificates on the Internet, which has very different (and, often, heavier) requirements of those tools. As a result, code signing is typically only done by rather large projects - and when it <em>is</em> done, it’s often inconsistently implemented, and hard to check automatically. In practice, this means code signing has largely been a formality to date, and not an effective deterrent to supply chain attacks.</p>
+<h3>The solution, part 2: Sigstore</h3>
+<p>And now, we finally get to <strong>Sigstore</strong>: a set of (free and open source) tools meant to make both signing and verifying code as painless and automatic as possible - in particular, a set of three core tools: <strong>Rekor</strong>, <strong>Cosign</strong>, and <strong>Fulcio</strong>. Here’s a brief summary of what each one does:</p>
+<ul>
+<li>
+<p><a href="https://github.com/sigstore/rekor"><strong>Rekor</strong></a> is a tamper-resistant ledger/storage service for metadata produced throughout the software supply chain, including signatures and timestamps. Developers can write that metadata to Rekor as part of their build process, and users can check the metadata of the software they’re running against Rekor in a standardized way to make sure everything checks out.</p>
+</li>
+<li>
+<p><a href="https://github.com/sigstore/cosign"><strong>Cosign</strong></a> is a tool designed to make signing artifacts like containers and binary blobs as easy as possible. It integrates with Rekor such that when you use it to sign something, the signature is automatically uploaded to Rekor’s transparency log.</p>
+</li>
+<li>
+<p><a href="https://github.com/sigstore/fulcio"><strong>Fulcio</strong></a> is a tool for creating short-lived certificates specifically for use in code signing, without the need to persist certificates longer term. It integrates with OIDC identity providers like Google, Github, and Microsoft to make establishing identity relatively painless compared to the status quo. (This is the project I submitted my pull request to!)</p>
+</li>
+</ul>
+<p>When used together, these tools are a powerful mix - the foundations for a more secure software supply chain.</p>
+<p>Of course, supply chains are only as good as their weakest link, which is why it’s important to get these tools into the hands of as many developers as possible. To that end, another part of the Sigstore project’s mission is to build integrations and interoperability with commonly-used software tools - like the Python toolchain, for example: when a developer publishes a package on PyPI, they might enforce checks against the Rekor transparency log.</p>
+<p>Finally, everyone involved in the Sigstore project recognizes that this kind of effort is a rising tide that lifts all boats: the ecosystem is better off when more people have good supply chain security. As such, the project’s sponsors see Sigstore as a <strong>public good service</strong> in the vein of <a href="https://letsencrypt.org/">LetsEncrypt</a>. While companies can build stuff on top of the core technology, there will always be a publicly-available and free instance for everyone to use.</p>
+<h2>Wrapping up</h2>
+<p>I… didn’t intend to write an intro to Sigstore that was this long. But I guess I did. Hooray?</p>
+<p>Anyway, this is what I’ve been working on for most of 2021. Isn’t it neat? I think it’s pretty neat. I did accidentally write an entire blog post about it, after all.</p>
+<p>I’ll be publishing a follow-up essay about my work on Fulcio specifically. Stay tuned, and thanks for reading!</p>
+
+    </div>
+    
         <div class="mdc-card__actions">
             <div class="mdc-card__action-buttons">
-                <div class="mdc-evolution-chip-set" role="grid">
+                <span class="mdc-evolution-chip-set" role="grid">
                     <span class="mdc-evolution-chip-set__chips" role="presentation">
                         
                         
                         
                         
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/tech'">
+                        <span class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/tech'">
                             <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
                                 <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
                                     <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
                                     <span class="mdc-evolution-chip__text-label">tech</span>
                                 </button>
                             </span>
-                        </div>
+                        </span>
                         
                         
                         
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/professional'">
+                        <span class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/professional'">
                             <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
                                 <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
                                     <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
                                     <span class="mdc-evolution-chip__text-label">professional</span>
                                 </button>
                             </span>
-                        </div>
+                        </span>
                         
                         
                         
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/security'">
+                        <span class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/security'">
                             <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
                                 <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
                                     <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
                                     <span class="mdc-evolution-chip__text-label">security</span>
                                 </button>
                             </span>
-                        </div>
+                        </span>
                         
                         
                         
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/thoughts'">
+                        <span class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/thoughts'">
                             <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
                                 <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
                                     <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
                                     <span class="mdc-evolution-chip__text-label">thoughts</span>
                                 </button>
                             </span>
-                        </div>
+                        </span>
                         
                         
                     </span>
-                </div>
+                </span>
             </div>
         </div>
-        
-    </div>
+    
 </div>
-
-  
-  
-
-<div class="mdc-layout-grid__cell">
-    <div class="mdc-card">
-        <div class="mdc-card__primary-action" onclick="window.location.href='/blog/a-matter-of-trust-1/'">
-            <div class="mdc-card__ripple"></div>
-            
-            <div class="mdc-card__media card-local-media--16-9">
-                <picture>
-    <source type="image/webp" srcset="/content/responsive/a2403cde-300.webp 300w, /content/responsive/a2403cde-600.webp 600w, /content/responsive/a2403cde-900.webp 900w, /content/responsive/a2403cde-1200.webp 1200w, /content/responsive/a2403cde-1500.webp 1500w, /content/responsive/a2403cde-1800.webp 1800w, /content/responsive/a2403cde-2100.webp 2100w" sizes="70vw">
-  <source type="image/jpeg" srcset="/content/responsive/a2403cde-300.jpeg 300w, /content/responsive/a2403cde-600.jpeg 600w, /content/responsive/a2403cde-900.jpeg 900w, /content/responsive/a2403cde-1200.jpeg 1200w, /content/responsive/a2403cde-1500.jpeg 1500w, /content/responsive/a2403cde-1800.jpeg 1800w, /content/responsive/a2403cde-2100.jpeg 2100w" sizes="70vw">
-        <img
-        alt=""
-        src="/content/responsive/a2403cde-300.jpeg"
-        width="300"
-        height="200">
-        </picture>
-            </div>
-            
-            <div class="card--primary">
-                <h2 class="card--title mdc-typography mdc-typography--headline5">A Matter of Trust, part 1
-                </h2>
-                <h3 class="card--subtitle mdc-typography mdc-typography--subtitle2">
-                    2021-09-29</h3>
-            </div>
-            <div class="card--secondary mdc-typography mdc-typography--body1">A professional retrospective and stream of consciousness all in one!</div>
-        </div>
-        
-        <div class="mdc-card__actions">
-            <div class="mdc-card__action-buttons">
-                <div class="mdc-evolution-chip-set" role="grid">
-                    <span class="mdc-evolution-chip-set__chips" role="presentation">
-                        
-                        
-                        
-                        
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/tech'">
-                            <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-                                <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-                                    <span class="mdc-evolution-chip__text-label">tech</span>
-                                </button>
-                            </span>
-                        </div>
-                        
-                        
-                        
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/professional'">
-                            <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-                                <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-                                    <span class="mdc-evolution-chip__text-label">professional</span>
-                                </button>
-                            </span>
-                        </div>
-                        
-                        
-                        
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/security'">
-                            <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-                                <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-                                    <span class="mdc-evolution-chip__text-label">security</span>
-                                </button>
-                            </span>
-                        </div>
-                        
-                        
-                        
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/privacy'">
-                            <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-                                <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-                                    <span class="mdc-evolution-chip__text-label">privacy</span>
-                                </button>
-                            </span>
-                        </div>
-                        
-                        
-                        
-                        <div class="mdc-evolution-chip" role="row" onclick="window.location.href='/blog/tags/thoughts'">
-                            <span class="mdc-evolution-chip__cell mdc-evolution-chip__cell--primary" role="gridcell">
-                                <button class="mdc-evolution-chip__action mdc-evolution-chip__action--primary" type="button" tabindex="-1">
-                                    <span class="mdc-evolution-chip__ripple mdc-evolution-chip__ripple--primary"></span>
-                                    <span class="mdc-evolution-chip__text-label">thoughts</span>
-                                </button>
-                            </span>
-                        </div>
-                        
-                        
-                    </span>
-                </div>
-            </div>
-        </div>
-        
-    </div>
-</div>
-
-  
-</div>
-
-<footer>
-  <div class="fabs">
-    <button class="mdc-fab mdc-fab--extended fab" aria-label="Favorite" onclick="window.location.href='/blog/'">
-      <div class="mdc-fab__ripple"></div>
-      <span class="mdc-fab__icon material-icons">library_books</span>
-      <span class="mdc-fab__label">Main Blog</span>
-    </button>
-    <button class="mdc-fab mdc-fab--extended fab" aria-label="Favorite" onclick="window.location.href='/blog/tags/'">
-      <div class="mdc-fab__ripple"></div>
-      <span class="mdc-fab__icon material-icons">label</span>
-      <span class="mdc-fab__label">All Tags</span>
-    </button>
-  </div>
-</footer>
-
-
-<script>
-            document.title = "security, page 0 - Mark's Blog";
-            var meta = document.createElement('meta');
-            meta.name = "description";
-            meta.content = "Everything I've written about security";
-            document.getElementsByTagName('head')[0].appendChild(meta);
-        </script>
 
                 </div>
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2"></div>

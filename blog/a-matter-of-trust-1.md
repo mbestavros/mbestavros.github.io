@@ -2,7 +2,7 @@
 layout: layouts/post
 title: A Matter of Trust, part 1
 subtitle: A professional retrospective and stream of consciousness all in one!
-date: Last Modified
+date: 2021-03-22
 header-image: https://unsplash.com/photos/ZVhm6rEKEX8/download?force=true
 tags:
     - tech

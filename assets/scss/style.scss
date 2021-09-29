@@ -10,20 +10,20 @@
   $on-surface: #ffffff,
 );
 
-@use "@material/icon-button";
 @use "@material/top-app-bar/mdc-top-app-bar";
 @use "@material/button/mdc-button";
 @use "@material/layout-grid/mdc-layout-grid";
 @use "@material/typography/mdc-typography";
-@use "@material/chips/styles";
 @use "@material/card/mdc-card";
 @use "@material/fab/mdc-fab";
 @use "@material/tab-bar/mdc-tab-bar";
 @use "@material/tab-scroller/mdc-tab-scroller";
 @use "@material/tab-indicator/mdc-tab-indicator";
 @use "@material/tab/mdc-tab";
-
-@include icon-button.core-styles;
+@use "@material/chips";
+@use "@material/chips/styles" as s1;
+@use "@material/icon-button";
+@use "@material/icon-button/styles" as s2;
 
 body {
   background-color: #121212;

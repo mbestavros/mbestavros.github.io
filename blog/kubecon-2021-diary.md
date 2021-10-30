@@ -23,7 +23,7 @@ Of course, I had a few practical reasons to be there, too: Sigstore, the project
 
 Since this was my first big business trip (and since some friends and colleagues have expressed interest in hearing about it), I figured I’d write up my experience! Hop in, reader, you’re in for quite a week.
 
-_(Note that this blog post will focus strictly on the “professional” side of the trip: the conference itself, the talks I attended, and my experience helping out with the Sigstore booth. I’m also writing a companion piece where I talk about my “after hours” experience as a tourist in LA… stay tuned.)_
+_(Note that this blog post will focus strictly on the “professional” side of the trip: the conference itself, the talks I attended, and my experience helping out with the Sigstore booth. I’ve also written a companion piece where I talk about my “after hours” experience as a tourist in LA - you can read that [here](https://mark.bestavros.net/blog/kubecon-2021-after-hours/).)_
 
 ## Sunday: the trip to LA
 
@@ -39,13 +39,13 @@ Okay, I’m still tired at this point. But also full of energy! It’s conferenc
 
 SupplyChainSecurityCon started itself right with... [Operation SLSA](https://www.youtube.com/watch?v=S_MXbt0p_pg). Do yourself a favor and set aside five minutes to watch that video - you _won’t_ regret it. Done? Good. I’m sure you’re feeling at least ten times cooler now.
 
-The rest of the morning was filled with more... traditional keynotes, including from Red Hat’s own Luke Hinds (delivered virtually, as he sadly couldn’t make it in person due to travel restrictions from the UK). The extended keynote was certainly the highlight, however, delivered by Trevor Rosen of none other than SolarWinds. Yes, [that SolarWinds](https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach)! It was a really cool look behind the curtains of what happened to them: how their engineers realized something had gone wrong, how they mitigated it, and how they dealt with the fallout. Most importantly, however, he talked in detail about what SolarWinds is calling Project Trebuchet: their effort to use community standards like Sigstore and others along with homegrown code to improve their supply chain security - something their company leadership had promised under oath to Congress, no less. It was an excellent talk, and I recommend giving it a watch when it becomes available online.
+The rest of the morning was filled with more... traditional keynotes, including from Red Hat’s own Luke Hinds (delivered virtually, as he sadly couldn’t make it in person due to travel restrictions from the UK). The extended keynote was certainly the highlight, however, delivered by Trevor Rosen of none other than SolarWinds. Yes, [that SolarWinds](https://en.wikipedia.org/wiki/2020_United_States_federal_government_data_breach)! It was a really cool look behind the curtains of what happened to them: how their engineers realized something had gone wrong, how they mitigated it, and how they dealt with the fallout. Most importantly, however, he talked in detail about what SolarWinds is calling Project Trebuchet: their effort to use community standards like Sigstore and others along with homegrown code to improve their supply chain security - something their company leadership had promised under oath to Congress, no less. It was an excellent talk, and I recommend giving it a watch - link [here](https://www.youtube.com/watch?v=1-tMRxqMwTQ&list=WL&index=49).
 
-After the keynotes, the rest of the day was a mixture of talks and panels with various people: developers working on Sigstore and similar projects (SLSA, Tekton, TUF, etc), developers from parts of the supply chain that can integrate that tooling (Jenkins, PyPI), as well as representatives from companies that have a stake in secure supply chains (Ericsson, CitiBank). All the talks were excellent and worth a watch if you’re interested in them, but I thought a particular highlight was the State of SBOMs panel hosted by Dan Lorenc and which featured Dr. Allan Friedman, who works for the US government and talked about how they’re working with existing developer communities to make things work with the recent executive order on supply chain security, particularly around standardization - think SLSA.
+After the keynotes, the rest of the day was a mixture of talks and panels with various people: developers working on Sigstore and similar projects (SLSA, Tekton, TUF, etc), developers from parts of the supply chain that can integrate that tooling (Jenkins, PyPI), as well as representatives from companies that have a stake in secure supply chains (Ericsson, CitiBank). All the talks were excellent and worth a watch if you’re interested in them (the full playlist of talks from the day is [here](https://www.youtube.com/watch?v=WIo6EhVCzW4&list=PLj6h78yzYM2NOCoaYcYbiAf4KPIF36T8t)), but I thought a particular highlight was the State of SBOMs panel hosted by Dan Lorenc and which featured Dr. Allan Friedman, who works for the US government and talked about how they’re working with existing developer communities to make things work with the recent executive order on supply chain security, particularly around standardization - think SLSA. [Here's](https://www.youtube.com/watch?v=yfRkIQsmJ04) the link.
 
 Stepping back, I noticed a few distinct high-level trends from the day:
 
-- Through a number of the talks, there was a lot of emphasis on _end to end_ supply chain security, and how different projects can be put together to achieve meaningful improvements to security. For a good example, watch the “State of the Art Supply Chain Security” talk.
+- Through a number of the talks, there was a lot of emphasis on _end to end_ supply chain security, and how different projects can be put together to achieve meaningful improvements to security. For a good example, watch the “State of the Art Supply Chain Security” talk [here](https://www.youtube.com/watch?v=PJ6b2eoq0NY).
 
 - There was a lot of discussion about _policy_: with tools like Sigstore reaching early release states, the question of the hour is not _whether_ we can improve security, but _how_. The tools exist; how do we use them effectively? The aforementioned SBOM panel had a good discussion on this.
 
@@ -55,11 +55,13 @@ And the day ended around 5pm! I was _exhausted_, but still really glad I went. T
 
 ## Tuesday: a bit of a lull
 
-I wasn’t signed up for any of the co-located events on Tuesday, so I mostly took the day off to explore LA and prepare for booth duty the following day.
+I wasn’t signed up for any of the co-located events on Tuesday, so I mostly took the day off to explore LA and prepare for booth duty the following day with Jyotsna Penumaka, my colleague at Red Hat and fellow Sigstore developer.
 
 <div class="card-local-media-half">
 {% responsiveImage, "content/personal/kubecon-rooftop-work.jpg", "" %}
 </div>
+
+Gotta say, the LA cityscape is a pretty great backdrop to hack away under.
 
 ## Wednesday-Friday: Kubecon!
 
@@ -69,7 +71,7 @@ The main event! I’m sure there’s a lot of things people are curious about, s
 
 As you might expect if you’re at all familiar with the project and the amount of attention it’s getting, the Sigstore project was very well represented at Kubecon. In addition to the Sigstore booth on the show floor, there were several talks from developers involved with the project throughout the three-day period.
 
-My favorite of those talks by far had to be the Wednesday keynote delivered by Dan Lorenc, CEO of Chainguard, and Red Hat’s own Bob Callaway - both Sigstore co-founders, along with Luke Hinds. Dan gave a great intro to Sigstore and why it’s important, but the highlight was easily Bob’s demo - not of Sigstore, but of what you’d need to do to sign a piece of software _without_ using Sigstore, instead relying on existing tools like `pgp`, `openssl`, and `curl`. Spoiler alert: it’s a lot, and it’s very tedious. Bob, of course, guided us through with charm, and I don’t think anyone left the talk unconvinced that _software signing could be a lot easier_.
+My favorite of those talks by far had to be the Wednesday keynote delivered by Dan Lorenc, CEO of Chainguard, and Red Hat’s own Bob Callaway - both Sigstore co-founders, along with Luke Hinds. Dan gave a great intro to Sigstore and why it’s important, but the highlight was easily Bob’s demo - not of Sigstore, but of what you’d need to do to sign a piece of software _without_ using Sigstore, instead relying on existing tools like `pgp`, `openssl`, and `curl`. Spoiler alert: it’s a lot, and it’s very tedious. Bob, of course, guided us through with charm, and I don’t think anyone left the talk unconvinced that _software signing could be a lot easier_. [Here's](https://youtu.be/PVhRQFS9Njg?t=1523) a timestamped link to Bob's demo, but the full 40-minute talk is definitely worth a watch if you're interested.
 
 <div class="card-local-media-half">
 {% responsiveImage, "content/personal/kubecon-sigstore-keynote.jpg", "" %}
@@ -111,7 +113,7 @@ My Saturday was a long one: my flight left LA at 8:30 AM and arrived in DC at 3:
 
 I felt good, though: I’d finished my first Kubecon!
 
-If you’ve made it this far, thank you so much for reading my disjointed thoughts and ramblings. I really enjoyed myself, and hopefully I’ll be back sooner rather than later!
+If you’ve made it this far, thank you so much for reading my disjointed thoughts and ramblings. I really enjoyed myself, and hopefully I’ll be back sooner rather than later! If you'd like to read more about my experience in LA beyond the conference, check out my companion piece - [Kubecon After Hours](https://mark.bestavros.net/blog/kubecon-2021-after-hours/)!
 
 <div class="card-local-media-half">
 {% responsiveImage, "content/personal/kubecon-sigstore-keys.jpg", "" %}

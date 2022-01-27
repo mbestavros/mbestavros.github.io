@@ -19,11 +19,11 @@ In order for the pagination list to work, we need to set up two things:
 {% assign currentCollection = collections.blogPages %}
 {% capture linkHead %}/blog/{% endcapture %}
 
-{% include snippets/post-pagination.html %}
+{% include 'snippets/post-pagination.html' %}
 
 <div class="mdc-layout-grid__inner">
   {% for post in tag.pageData %}
-  {% include snippets/post-card.html %}
+  {% include 'snippets/post-card.html' %}
   {% endfor %}
 </div>
 

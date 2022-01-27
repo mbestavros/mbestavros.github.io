@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="{{ page.lang | default: site.lang | default: "en" }}">
-{% include snippets/head.html %}
+{% include 'snippets/head.html' %}
 
 <body class="mdc-typography">
-    {% include snippets/top-app-bar.html %}
+    {% include 'snippets/top-app-bar.html' %}
     <main class="main-content mdc-top-app-bar--fixed-adjust" id="main-content" aria-label="Content">
         <div class="mdc-layout-grid">
             <div class="mdc-layout-grid__inner">
@@ -17,7 +17,7 @@
     </main>
 </body>
 
-<script>{% include assets/bundle.js %}</script>
+<script>{% include 'assets/bundle.js' %}</script>
 <script data-goatcounter="https://mbestavros-personal-site.goatcounter.com/count"
         async src="//gc.zgo.at/count.js"></script>
 

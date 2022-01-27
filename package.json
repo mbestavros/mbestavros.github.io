@@ -19,7 +19,7 @@
   },
   "homepage": "https://github.com/mbestavros/mbestavros.github.io#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^0.12.1",
+    "@11ty/eleventy": "^1.0.0",
     "@11ty/eleventy-img": "^1.0.0",
     "@babel/core": "^7.16.12",
     "@babel/preset-env": "^7.16.11",
@@ -47,6 +47,5 @@
     "webpack": "^5.67.0",
     "webpack-cli": "^4.9.2",
     "webpack-dev-server": "^4.7.3"
-  },
-  "dependencies": {}
+  }
 }

@@ -92,7 +92,8 @@ async function responsiveImages(src, alt) {
 
     if (alt === undefined) {
         // You bet we throw an error on missing alt (alt="" works okay)
-        throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
+        //throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
+        alt="";
     }
 
     // Iterate over formats and widths

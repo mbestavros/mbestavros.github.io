@@ -30,6 +30,7 @@
     "@material/layout-grid": "^14.0.0",
     "@material/ripple": "^14.0.0",
     "@material/tab-bar": "^14.0.0",
+    "@material/tab-scroller": "^14.0.0",
     "@material/top-app-bar": "^14.0.0",
     "@material/typography": "^14.0.0",
     "autoprefixer": "^10.4.7",

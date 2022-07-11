@@ -42,7 +42,7 @@
     "file-loader": "^6.2.0",
     "lodash.chunk": "^4.2.0",
     "material-components-web": "^14.0.0",
-    "postcss-loader": "^7.0.0",
+    "postcss-loader": "^7.0.1",
     "sass": "^1.53.0",
     "sass-loader": "^13.0.2",
     "webpack": "^5.73.0",

@@ -21,7 +21,7 @@
   "devDependencies": {
     "@11ty/eleventy": "^1.0.2",
     "@11ty/eleventy-img": "^2.0.1",
-    "@babel/core": "^7.19.6",
+    "@babel/core": "^7.20.2",
     "@babel/preset-env": "^7.20.2",
     "@material/button": "^14.0.0",
     "@material/card": "^14.0.0",

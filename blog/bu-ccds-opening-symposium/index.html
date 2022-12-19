@@ -126,7 +126,7 @@
 <p><em>(Feel free to skip this section if you're already aware of what Sigstore is and what it does.)</em></p>
 <p><a href="https://sigstore.dev">Sigstore</a> is a very cool project. Its goal is to make <em>software signing</em> as easy and seamless as possible, with the aim of preventing <em>software supply chain attacks</em>.</p>
 <p>What does that mean? Most modern software makes use of tons of interconnected dependencies. Of course, an unspoken assumption of these dependencies is that they come from a particular origin: a specific company, or a specific person. But what if that assumption is violated? What if some malicious actor manages to replace a part of a larger piece of software with a backdoored piece of code? Short answer: bad things happen. This is what's called a <em>supply chain attack</em>.</p>
-<p>Fortunately, there's a pretty good way to combat these attacks: <strong>software signing</strong>! Signing, in short, is the act of using cryptographic mechanisms like signatures and certificates to verify that something (a dependency, container image, binary, etc) was authored by a particular party, and that it hasn’t changed since the author verified their ownership of it. This is a powerful tool - one that, if (theoretically) enforced for all dependencies in the software supply chain, would effectively deny any opportunity for a supply chain attack to happen in the first place. Which is great!</p>
+<p>Fortunately, there's a pretty good way to combat these attacks: <em>software signing!</em> Signing, in short, is the act of using cryptographic mechanisms like signatures and certificates to verify that something (a dependency, container image, binary, etc) was authored by a particular party, and that it hasn’t changed since the author verified their ownership of it. This is a powerful tool - one that, if (theoretically) enforced for all dependencies in the software supply chain, would effectively deny any opportunity for a supply chain attack to happen in the first place. Which is great!</p>
 <p>Unfortunately, code signing isn't nearly as ubiquitous as would be ideal. In the past, relevant signing tools have been fairly cumbersome, leaving only the most dedicated developers willing to sign their code and even fewer consumers willing to verify the software they use. That's why Sigstore was born: if software signing becomes as easy as possible, it will get adopted, and meaningfully improve supply chain security.</p>
 <p>If you're curious about the different tools under the Sigstore umbrella, I wrote up a more detailed rundown in a <a href="https://mark.bestavros.net/blog/sigstore-in-a-nutshell/">previous blog post.</a></p>
 <h3>It's All About Provenance</h3>
@@ -203,7 +203,7 @@
         height="225">
         </picture>
 </div>
-<p><em>Five of the original BU Computer Science professors from the late 1990s. From left to right: John Byers, Mark Crovella, Azer Bestavros, Wayne Snyder, and Abraham Matta.</em></p>
+<p><em>Five of the original BU Computer Science professors from the late 1990s. I've taken classes with every single one of them. From left to right: John Byers, Mark Crovella, Azer Bestavros, Wayne Snyder, and Abraham Matta.</em></p>
 <div class="card-local-media">
 <picture>
     <source type="image/webp" srcset="/content/responsive/bBO3tWteCJ-300.webp 300w, /content/responsive/bBO3tWteCJ-600.webp 600w, /content/responsive/bBO3tWteCJ-900.webp 900w, /content/responsive/bBO3tWteCJ-1200.webp 1200w, /content/responsive/bBO3tWteCJ-1500.webp 1500w, /content/responsive/bBO3tWteCJ-1800.webp 1800w, /content/responsive/bBO3tWteCJ-2100.webp 2100w" sizes="70vw">
@@ -227,10 +227,10 @@
         height="225">
         </picture>
 </div>
-<p><em>The multi-million-dollar night time view of Boston, looking east onto Kenmore Square and Back Bay. The moon was out that night, and reflecting beautifully on the Charles River.</em></p>
+<p><em>The multi-million-dollar night time view of Boston, looking east onto Kenmore Square, Back Bay, and downtown. The moon was out that night, and reflecting beautifully on the Charles River.</em></p>
 <h2>Some housekeeping notes</h2>
 <p>I hope you enjoyed reading - this was a fun Friday, and I enjoyed reflecting on it! I'd say to stay tuned for more, but... regularity really isn't my forte, is it?</p>
-<p>If you'd like to hear more of what I have to say, I do post all my new blog posts on my (very sparse otherwise) Twitter feed - feel free to follow me there if you haven't already. Though, as a good open source enthusiast (and perhaps also spurred on by Twitter's current events), I have also created a Mastodon account at . Feel free to follow me there as well!</p>
+<p>If you'd like to hear more of what I have to say, I do post all my new blog posts on my (very sparse otherwise) <a href="https://twitter.com/MBestavros">Twitter</a> feed - feel free to follow me there if you haven't already. Though, as a good open source enthusiast (and perhaps also spurred on by Twitter's current events), I have also created a Mastodon account at <a href="https://fosstodon.org/@mbestavros">@mbestavros@fosstodon.org</a>. Feel free to follow me there as well!</p>
 <p>Until next time. Have a great holiday season!</p>
 <div class="card-local-media">
 <picture>

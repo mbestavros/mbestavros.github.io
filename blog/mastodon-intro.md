@@ -1,7 +1,7 @@
 ---
 layout: layouts/post
 title: I'm on Mastodon!
-subtitle: Maybe I'll actually blog this time.
+subtitle: Maybe I'll actually write things now.
 date: 2023-02-12
 header-image: https://images.unsplash.com/photo-1603483080228-04f2313d9f10
 tags:
@@ -56,7 +56,7 @@ So, long story short, I'm on Mastodon now. It satisfies the "Twitter itch" perfe
 
 Which brings me back to blogging. As I've mentioned, I'm almost entirely a lurker rather than a poster on most social media I'm on. I don't anticipate that changing _too_ much with Mastodon, but I do want to start posting some of my shorter-form thoughts. I think Mastodon will be a great landing spot for them.
 
-You can find me at [@mbestavros@fosstodon.org](https://fosstodon.org/@mbestavros). I've got follow requests on as a privacy measure, but feel free to send one! Chances are I'll accept it, and maybe even follow you back. Expect occasional random thoughts on tech, gadgets, and urbanism (as is my brand), plus a few boosted posts here and there for good measure. Oh, and links to any new blog posts, of course.
+You can find me at [@mbestavros@fosstodon.org](https://fosstodon.org/@mbestavros). I've got follow requests on as a privacy measure, but feel free to send one! Chances are I'll accept it, and maybe even follow you back. Expect occasional random thoughts on tech, gadgets, and urbanism (as is my brand), plus a few boosted posts here and there for good measure. Oh, and links to any new blog posts, of course. Finally, as should be my standard disclaimer, I can't guarantee regularity. But I will be there!
 
 See you on the Fediverse!
 

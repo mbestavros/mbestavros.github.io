@@ -79,3 +79,5 @@ I… didn’t intend to write an intro to Sigstore that was this long. But I gue
 Anyway, this is what I’ve been working on for most of 2021. Isn’t it neat? I think it’s pretty neat. I did accidentally write an entire blog post about it, after all.
 
 I’ll be publishing a follow-up essay about my work on Fulcio specifically. Stay tuned, and thanks for reading!
+
+_Header courtesy of [Lewis Keegan on Unsplash](https://unsplash.com/photos/XQaqV5qYcXg)_

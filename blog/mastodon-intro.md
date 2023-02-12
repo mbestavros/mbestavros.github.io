@@ -61,3 +61,5 @@ You can find me at [@mbestavros@fosstodon.org](https://fosstodon.org/@mbestavros
 See you on the Fediverse!
 
 [1] Of course, the article doesn't really acknowledge that the new baseline userbase Mastodon is settling into is multiple times larger than it was before the Great Migration. From my personal experience, that's more than enough to make it feel like a lively place! [Mike Masnick](https://www.techdirt.com/2023/02/08/lazy-reporters-claiming-fediverse-is-slumping-despite-massive-increase-in-usage/) and [Cory Doctorow](https://doctorow.medium.com/of-course-mastodon-lost-users-c48ef8102891) have both written great analyses worth reading.
+
+_Header courtesy of [Geran de Klerk on Unsplash](https://unsplash.com/photos/AX9sJ-mPoL4)_

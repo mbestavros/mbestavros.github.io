@@ -1,4 +1,4 @@
---- 
+---
 layout: layouts/post
 title: Hello, world!
 subtitle: A quick look into how I built my website.
@@ -7,7 +7,7 @@ header-image: https://unsplash.com/photos/Q1p7bh3SHj8/download?force=true
 tags:
     - tech
     - development
---- 
+---
 # I (finally) have a blog!
 
 It's been a long time coming.
@@ -63,4 +63,6 @@ Apart from that, I'm a gadget nerd, and I've always wanted to write reviews of m
 
 It's also quite likely I'll have a few posts about what I'm working on professionally at the moment, if I think it's particularly interesting and worth sharing in long-form. Likewise for personal life updates.
 
-That's all I have for now. Thanks for reading, and stay tuned! I'll probably propagate new articles via my [Twitter](https://twitter.com/MBestavros) feed, so that's probably the best place to follow me.
+That's all I have for now. Thanks for reading, and stay tuned! I'll probably propagate new articles via my [Twitter](https://twitter.com/MBestavros) feed, so that's probably the best place to follow me. _(Update 2022-02-12: I'm now on [Mastodon!](https://fosstodon.org/@mbestavros))_
+
+_Header courtesy of [NASA on Unsplash](https://unsplash.com/photos/Q1p7bh3SHj8)_

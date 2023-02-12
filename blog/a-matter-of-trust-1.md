@@ -1,4 +1,4 @@
---- 
+---
 layout: layouts/post
 title: A Matter of Trust, part 1
 subtitle: A professional retrospective and stream of consciousness all in one!
@@ -10,7 +10,7 @@ tags:
     - security
     - privacy
     - thoughts
---- 
+---
 # What's a blog without writing?
 
 Well... my blog, I suppose. At least until now. Let’s change that, shall we?
@@ -102,3 +102,5 @@ Thanks for reading! Feel free to get in touch if you’d like to discuss further
 
 - Enarx’s project lead, [Mike Bursell](https://aliceevebob.com/), for his time proofreading these very scattershot thoughts -- very much appreciated.
 - The Enarx project, for the select few slides I used from our slide deck (full deck [here](https://github.com/enarx/enarx.github.io/blob/master/docs/enarx_slides_2020-12.pdf).)
+
+_Header courtesy of [NOAA on Unsplash](https://unsplash.com/photos/ZVhm6rEKEX8)_

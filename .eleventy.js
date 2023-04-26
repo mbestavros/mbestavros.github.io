@@ -74,39 +74,29 @@ async function responsiveImages(src, alt) {
         widths: [300, 600, 900, 1200, 1500, 1800, 2100],
 
         // Pass any format supported by sharp
-        formats: ["webp", "jpeg"], //"png"
+        formats: ["avif", "jpeg"], //"png"
 
         // the directory in the image URLs <img src="/img/MY_IMAGE.png">
         urlPath: "/content/responsive/",
 
         // the path to the directory on the file system to write the image files to disk
-        outputDir: "_site/content/responsive/",
+        outputDir: "./content/responsive/",
 
         // eleventy-cache-assets
         // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server
         cacheDuration: "1d"
     };
-    let stats = await Image(src, options);
-    let lowestSrc = stats.jpeg[0];
+    let metadata = await Image(src, options);
+
     let sizes = "70vw"; // Make sure you customize this!
+    let imageAttributes = {
+        alt,
+        sizes,
+        loading: "lazy",
+        decoding: "async"
+    };
 
-    if (alt === undefined) {
-        // You bet we throw an error on missing alt (alt="" works okay)
-        //throw new Error(`Missing \`alt\` on responsiveImage from: ${src}`);
-        alt="";
-    }
-
-    // Iterate over formats and widths
-    return `<picture>
-  ${Object.values(stats).map(imageFormat => {
-        return `  <source type="image/${imageFormat[0].format}" srcset="${imageFormat.map(entry => `${entry.url} ${entry.width}w`).join(", ")}" sizes="${sizes}">`;
-    }).join("\n")}
-        <img
-        alt="${alt}"
-        src="${lowestSrc.url}"
-        width="${lowestSrc.width}"
-        height="${lowestSrc.height}">
-        </picture>`;
+    return Image.generateHTML(metadata, imageAttributes)
 }
 
 

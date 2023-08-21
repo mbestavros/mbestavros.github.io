@@ -43,7 +43,7 @@
     "lodash.chunk": "^4.2.0",
     "material-components-web": "^14.0.0",
     "postcss-loader": "^7.3.3",
-    "sass": "^1.65.1",
+    "sass": "^1.66.1",
     "sass-loader": "^13.3.2",
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",

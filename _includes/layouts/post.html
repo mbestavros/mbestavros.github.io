@@ -6,9 +6,11 @@ layout: layouts/default
         <h1 class="article-title mdc-typography--headline3" id="article-title">{{ title }}</h1>
         <h3 class="article-subtitle mdc-typography--headline6" id="article-subtitle">{{ subtitle }}</h3>
     </div>
+    {% if header-image != "" %}
     <div class="mdc-card__media card-local-media--16-9">
         {% responsiveImage, header-image, "" %}
     </div>
+    {% endif %}
     <div class="post-content mdc-typography mdc-typography--body1">
         {{ content }}
     </div>

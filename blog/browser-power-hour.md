@@ -1,9 +1,9 @@
 ---
 layout: layouts/post
 title: "browser-power-hour, or: how to benchmark power efficiency of Android web browsers"
-subtitle: Is your favorite web browser a battery hog? Time to find out!
+subtitle: Is your favorite browser a battery hog? Time to find out!
 date: 2024-06-02
-header-image: https://unsplash.com/photos/k9e4KXs6AGQ/download?force=true
+header-image:
 tags:
     - tech
     - development

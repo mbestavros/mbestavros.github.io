@@ -1,5 +1,9 @@
 name: Dependabot auto-merge
-on: pull_request
+on:
+  pull_request:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 0"
 
 permissions:
   contents: write

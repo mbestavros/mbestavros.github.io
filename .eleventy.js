@@ -11,8 +11,9 @@ export default function (eleventyConfig) {
     eleventyConfig.setDataDeepMerge(true);
 
     // Shortcode for responsive images with eleventy-img
-    eleventyConfig.addShortcode("responsiveImage", async function (src, alt) {
-        return await responsiveImages(src, alt);
+    // Shortcode for responsive images with eleventy-img
+    eleventyConfig.addShortcode("responsiveImage", async function (src, alt, sizes) {
+        return await responsiveImages(src, alt, sizes);
     });
 
     // Shortcode for editing title and description dynamically via JS
@@ -67,9 +68,8 @@ export default function (eleventyConfig) {
 // Each invocation of this function can take about a second per call, so it
 // _will_ slow down the build. Set `runWithoutImages` to true to make things
 // faster (but without images).
-async function responsiveImages(src, alt) {
-    let runWithoutImages = false;
-    if (!src || runWithoutImages) {
+async function responsiveImages(src, alt, sizes = "70vw") {
+    if (!src || process.env.SKIP_IMAGES) {
         return "";
     }
     console.log("Converting " + src);
@@ -83,10 +83,10 @@ async function responsiveImages(src, alt) {
         formats: ["avif", "jpeg"], //"png"
 
         // the directory in the image URLs <img src="/img/MY_IMAGE.png">
-        urlPath: "/content/responsive/",
+        urlPath: "/assets/images/",
 
         // the path to the directory on the file system to write the image files to disk
-        outputDir: "./content/responsive/",
+        outputDir: "./_site/assets/images/",
 
         // eleventy-cache-assets
         // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server
@@ -94,7 +94,8 @@ async function responsiveImages(src, alt) {
     };
     let metadata = await Image(src, options);
 
-    let sizes = "70vw"; // Make sure you customize this!
+
+
     let imageAttributes = {
         alt,
         sizes,

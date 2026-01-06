@@ -4,7 +4,7 @@ The repository for my personal Github Pages-hosted website. Uses Google's [Mater
 
 ## Running the site
 
-This site is built on Node.JS; you will need that installed and working first.
+This site is built on Node.JS (v22+ required); you will need that installed and working first.
 
 Clone the repo. Then, install the site's dependencies with `npm install`.
 
@@ -13,8 +13,8 @@ Once that has finished, you can build and serve the site using `npm start`. You 
 ## Credits
 
 - [Eleventy](https://github.com/11ty/eleventy/) for a fantastic static site generator
-- [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively
-- [Webpack](https://webpack.js.org/) for bundling and compiling SCSS/JS
+- [Material Components for the Web](https://github.com/material-components/material-components-web) for the lovely UX I use so extensively (Note: Deprecated, slated for removal)
+- [Vite](https://vitejs.dev/) for fast build tooling and serving
 - [Unsplash](https://unsplash.com/) for some of the lovely imagery
 - [GoatCounter](https://www.goatcounter.com/) for basic privacy-preserving analytics
 

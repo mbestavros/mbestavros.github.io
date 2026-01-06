@@ -3,12 +3,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
-    <meta name="Description" content="{{ subtitle }}">
+    <meta name="Description" content="{{ subtitle | escape }}">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    <style>
-        {% include 'assets/bundle.css' %}
-    </style>
+    <link rel="stylesheet" href="/assets/scss/style.scss">
     <link rel="apple-touch-icon" sizes="180x180" href="/content/assets/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/content/assets/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/content/assets/favicon-16x16.png">

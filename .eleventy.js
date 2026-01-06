@@ -1,7 +1,13 @@
-const Image = require("@11ty/eleventy-img");
-module.exports = function (eleventyConfig) {
+import Image from "@11ty/eleventy-img";
+import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import lodashChunk from "lodash.chunk";
+
+export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("content");
-    eleventyConfig.addPassthroughCopy("CNAME")
+
+    eleventyConfig.addPassthroughCopy("CNAME");
+    eleventyConfig.addPassthroughCopy("assets");
+    eleventyConfig.addPlugin(EleventyVitePlugin);
     eleventyConfig.setDataDeepMerge(true);
 
     // Shortcode for responsive images with eleventy-img
@@ -68,7 +74,7 @@ async function responsiveImages(src, alt) {
     }
     console.log("Converting " + src);
 
-    options = {
+    const options = {
         // Array of widths
         // Optional: use falsy value to fall back to native image size
         widths: [300, 600, 900, 1200, 1500, 1800, 2100],
@@ -112,8 +118,7 @@ inverse: if set to true, page selection is inverted -- in other words, return al
 filter_tags. Default is false.
 */
 function createFilteredCollection(collection, paginationSize, filter_tags, inverse = false) {
-    // We use lodashChunk, so require it.
-    var lodashChunk = require('lodash.chunk');
+    // We use lodashChunk (imported at top).
 
     // Get unique list of tags
     let tagSet = getUniqueTags(collection, filter_tags, inverse);

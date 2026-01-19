@@ -23,7 +23,7 @@ export default function (eleventyConfig) {
                         },
                         {
                             src: './CNAME',
-                            dest: './CNAME'
+                            dest: '.'
                         }
                     ]
                 })

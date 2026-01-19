@@ -22,8 +22,8 @@ export default function (eleventyConfig) {
                             dest: 'content/personal'
                         },
                         {
-                            src: 'CNAME',
-                            dest: 'CNAME'
+                            src: './CNAME',
+                            dest: './CNAME'
                         }
                     ]
                 })

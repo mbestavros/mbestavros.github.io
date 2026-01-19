@@ -1,13 +1,30 @@
 import Image from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
+import { viteStaticCopy } from "vite-plugin-static-copy";
 import lodashChunk from "lodash.chunk";
 
 export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("content");
 
+
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("assets");
-    eleventyConfig.addPlugin(EleventyVitePlugin);
+
+    eleventyConfig.addPlugin(EleventyVitePlugin, {
+        viteOptions: {
+            plugins: [
+                viteStaticCopy({
+                    targets: [
+                        {
+                            src: 'content/personal/*.pdf',
+                            dest: 'content/personal'
+                        }
+                    ]
+                })
+            ]
+        }
+    });
+
     eleventyConfig.setDataDeepMerge(true);
 
     // Shortcode for responsive images with eleventy-img

@@ -1,7 +1,7 @@
-import Image from "@11ty/eleventy-img";
 import EleventyVitePlugin from "@11ty/eleventy-plugin-vite";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 import lodashChunk from "lodash.chunk";
+import pluginImages from "./eleventy.config.images.js";
 
 export default function (eleventyConfig) {
     eleventyConfig.addPassthroughCopy("content");
@@ -9,6 +9,8 @@ export default function (eleventyConfig) {
 
     eleventyConfig.addPassthroughCopy("CNAME");
     eleventyConfig.addPassthroughCopy("assets");
+
+    eleventyConfig.addPlugin(pluginImages);
 
     eleventyConfig.addPlugin(EleventyVitePlugin, {
         viteOptions: {
@@ -18,6 +20,10 @@ export default function (eleventyConfig) {
                         {
                             src: 'content/personal/*.pdf',
                             dest: 'content/personal'
+                        },
+                        {
+                            src: 'CNAME',
+                            dest: 'CNAME'
                         }
                     ]
                 })
@@ -26,12 +32,6 @@ export default function (eleventyConfig) {
     });
 
     eleventyConfig.setDataDeepMerge(true);
-
-    // Shortcode for responsive images with eleventy-img
-    // Shortcode for responsive images with eleventy-img
-    eleventyConfig.addShortcode("responsiveImage", async function (src, alt, sizes) {
-        return await responsiveImages(src, alt, sizes);
-    });
 
     // Shortcode for editing title and description dynamically via JS
     eleventyConfig.addShortcode("pageMetadata", async function (title, description) {
@@ -79,49 +79,6 @@ export default function (eleventyConfig) {
         },
     };
 };
-
-
-// Function to generate and markup responsive images.
-// Each invocation of this function can take about a second per call, so it
-// _will_ slow down the build. Set `runWithoutImages` to true to make things
-// faster (but without images).
-async function responsiveImages(src, alt, sizes = "70vw") {
-    if (!src || process.env.SKIP_IMAGES) {
-        return "";
-    }
-    console.log("Converting " + src);
-
-    const options = {
-        // Array of widths
-        // Optional: use falsy value to fall back to native image size
-        widths: [300, 600, 900, 1200, 1500, 1800, 2100],
-
-        // Pass any format supported by sharp
-        formats: ["avif", "jpeg"], //"png"
-
-        // the directory in the image URLs <img src="/img/MY_IMAGE.png">
-        urlPath: "/assets/images/",
-
-        // the path to the directory on the file system to write the image files to disk
-        outputDir: "./_site/assets/images/",
-
-        // eleventy-cache-assets
-        // If a remote image URL, this is the amount of time before it downloads a new fresh copy from the remote server
-        cacheDuration: "1d"
-    };
-    let metadata = await Image(src, options);
-
-
-
-    let imageAttributes = {
-        alt,
-        sizes,
-        loading: "lazy",
-        decoding: "async"
-    };
-
-    return Image.generateHTML(metadata, imageAttributes)
-}
 
 
 /*

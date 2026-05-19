@@ -37,7 +37,7 @@
     "lodash.chunk": "^4.2.0",
     "material-components-web": "^14.0.0",
     "sass": "^1.99.0",
-    "vite": "^8.0.12",
+    "vite": "^8.0.13",
     "vite-plugin-static-copy": "^4.1.0"
   }
 }

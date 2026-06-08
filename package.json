@@ -38,6 +38,6 @@
     "material-components-web": "^14.0.0",
     "sass": "^1.100.0",
     "vite": "^8.0.16",
-    "vite-plugin-static-copy": "^4.1.0"
+    "vite-plugin-static-copy": "^4.1.1"
   }
 }

@@ -24,6 +24,10 @@ export default function (eleventyConfig) {
             decoding: "async"
         };
 
+        if (!metadata) {
+            return "";
+        }
+
         return Image.generateHTML(metadata, imageAttributes);
     });
 };

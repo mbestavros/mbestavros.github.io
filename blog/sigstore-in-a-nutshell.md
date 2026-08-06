@@ -3,7 +3,7 @@ layout: layouts/post
 title: Sigstore, in a nutshell
 subtitle: Join me on a journey through the depths of supply chain security.
 date: 2021-09-29
-header-image: https://unsplash.com/photos/XQaqV5qYcXg/download?force=true
+header-image: https://images.unsplash.com/photo-1550751827-4bd374c3f58b
 tags:
     - tech
     - professional

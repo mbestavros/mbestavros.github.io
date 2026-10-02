@@ -42,6 +42,6 @@
   },
   "overrides": {
     "js-yaml": "^4.3.2",
-    "brace-expansion": "^2.1.4"
+    "brace-expansion": "^2.1.7"
   }
 }
